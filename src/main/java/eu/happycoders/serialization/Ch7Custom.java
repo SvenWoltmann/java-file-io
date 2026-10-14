@@ -43,6 +43,25 @@ public class Ch7Custom {
     var customer = new eu.happycoders.serialization.custom.entity.Customer(42, "Ada Lovelace");
     System.out.println(copy(customer));
 
+    System.out.println("== Renamed field, old stream");
+    byte[] oldStream =
+        serialize(
+            new eu.happycoders.serialization.versioning.explicit.v1.Customer(
+                "Ada Lovelace", "ada@example.com"));
+    try (var in =
+        new PackageSwitchingObjectInputStream(
+            new ByteArrayInputStream(oldStream),
+            eu.happycoders.serialization.versioning.explicit.v1.Customer.class,
+            eu.happycoders.serialization.custom.renamed.Customer.class)) {
+      System.out.println(in.readObject());
+    }
+
+    System.out.println("== Renamed field, new stream");
+    System.out.println(
+        copy(
+            new eu.happycoders.serialization.custom.renamed.Customer(
+                "Ada Lovelace", "ada@example.com")));
+
     System.out.println("== Singleton without readResolve()");
     Status status = copy(Status.OPEN);
     System.out.println(status + " == Status.OPEN: " + (status == Status.OPEN));

@@ -27,9 +27,11 @@ public class Ch4Transient {
 
     System.out.println("== After reading, with readObject()");
     OrderWithReadObject fixed = new OrderWithReadObject(1001);
+    fixed.onChange(o -> System.out.println("Order " + o.id() + " changed"));
     fixed.addItem(new OrderItem("Notebook", 2, new BigDecimal("4.99")));
+
     OrderWithReadObject fixedCopy = copy(fixed);
-    fixedCopy.onChange(o -> System.out.println("Order " + o.id() + " changed"));
+    fixedCopy.onChange(o -> System.out.println("Copy " + o.id() + " changed"));
     fixedCopy.addItem(new OrderItem("Fountain pen", 1, new BigDecimal("39.90")));
     System.out.println("Total: " + fixedCopy.total());
   }

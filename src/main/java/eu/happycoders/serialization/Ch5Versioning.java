@@ -56,7 +56,9 @@ public class Ch5Versioning {
 
   private static void printUid(Class<?> type) {
     long uid = ObjectStreamClass.lookup(type).getSerialVersionUID();
-    System.out.println(type.getPackageName().replaceAll(".*\\.", "") + ": " + uid);
+    String packageName = type.getPackageName();
+    String version = packageName.substring(packageName.lastIndexOf('.') + 1);
+    System.out.println(version + ": " + uid);
   }
 
   private static void read(byte[] data, Class<?> writtenAs, Class<?> readAs)

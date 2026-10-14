@@ -27,10 +27,22 @@
     <!-- The classes are the runnable listings of the article; there is nothing to unit-test in them. -->
     <sonar.coverage.exclusions>**/*.java</sonar.coverage.exclusions>
 
-    <sonar.issue.ignore.multicriteria>e1</sonar.issue.ignore.multicriteria>
+    <sonar.issue.ignore.multicriteria>e1,e2,e3,e4</sonar.issue.ignore.multicriteria>
     <!-- The examples print their results; System.out is the program's output, not logging. -->
     <sonar.issue.ignore.multicriteria.e1.ruleKey>java:S106</sonar.issue.ignore.multicriteria.e1.ruleKey>
     <sonar.issue.ignore.multicriteria.e1.resourceKey>**/*.java</sonar.issue.ignore.multicriteria.e1.resourceKey>
+    <!-- Ch2Reading reads several objects until the EOFException ends the loop: that is the form the
+         article shows before it recommends writing one list instead. -->
+    <sonar.issue.ignore.multicriteria.e2.ruleKey>java:S2189</sonar.issue.ignore.multicriteria.e2.ruleKey>
+    <sonar.issue.ignore.multicriteria.e2.resourceKey>**/Ch2Reading.java</sonar.issue.ignore.multicriteria.e2.resourceKey>
+    <!-- The superclass in inheritance/nodefault has no no-arg constructor on purpose: the
+         "no valid constructor" exception when reading is the point of the listing. -->
+    <sonar.issue.ignore.multicriteria.e3.ruleKey>java:S2055</sonar.issue.ignore.multicriteria.e3.ruleKey>
+    <sonar.issue.ignore.multicriteria.e3.resourceKey>**/inheritance/nodefault/*.java</sonar.issue.ignore.multicriteria.e3.resourceKey>
+    <!-- OrderService.Draft is an inner class on purpose: the NotSerializableException for the
+         outer class is what the article shows; the text names "static" as the fix. -->
+    <sonar.issue.ignore.multicriteria.e4.ruleKey>java:S2066</sonar.issue.ignore.multicriteria.e4.ruleKey>
+    <sonar.issue.ignore.multicriteria.e4.resourceKey>**/special/OrderService.java</sonar.issue.ignore.multicriteria.e4.resourceKey>
   </properties>
 
   <build>

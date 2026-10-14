@@ -2,6 +2,7 @@ package eu.happycoders.serialization;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Customer implements Serializable {
 
@@ -24,6 +25,16 @@ public class Customer implements Serializable {
 
   public String email() {
     return email;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    return o instanceof Customer other && name.equals(other.name) && email.equals(other.email);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(name, email);
   }
 
   @Override

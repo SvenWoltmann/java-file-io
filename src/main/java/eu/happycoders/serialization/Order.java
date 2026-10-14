@@ -4,6 +4,7 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Order implements Serializable {
 
@@ -32,6 +33,19 @@ public class Order implements Serializable {
 
   public List<OrderItem> items() {
     return List.copyOf(items);
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    return o instanceof Order other
+        && id == other.id
+        && customer.equals(other.customer)
+        && items.equals(other.items);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(id, customer, items);
   }
 
   @Override

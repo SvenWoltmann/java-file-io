@@ -27,6 +27,7 @@ public class Intro {
         var in = new ObjectInputStream(fileIn)) {
       Order copy = (Order) in.readObject();
       System.out.println(copy);
+      System.out.println("Equal: " + copy.equals(order));
       System.out.println("Same object: " + (copy == order));
     }
   }

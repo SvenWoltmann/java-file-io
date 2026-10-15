@@ -27,6 +27,7 @@ Every class with a `main()` method is one chapter of the article and prints the 
 * `Ch6Inheritance` – a serializable class with a non-serializable superclass
 * `Ch7Custom` – validation in `readObject()`, `writeObject()` for the superclass state, `readResolve()`, the serialization proxy
 * `Ch8Special` – records, enums (including a renamed constant), lambdas, and inner classes
+* `Ch8LambdaNames` – a serializable lambda written with `write` and read with `read`; renaming its variable and recompiling makes the old stream unreadable (the steps are in the class comment)
 * `Ch9Collections` – `ArrayList` capacity, `List.of()`, views such as `keySet()` and `subList()`
 * `Ch10Filters` – deserialization filters from patterns, the missing `!*`, and the limits `maxdepth` (against Joshua Bloch’s deserialization bomb) and `maxarray`
 * `Ch10FilterFactory` – a filter factory that applies a filter within a `ScopedValue` scope

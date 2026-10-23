@@ -31,6 +31,7 @@ public class Ch5CheckError {
       System.out.println("new PrintWriter(File, ISO_8859_1), checkError(): " + latin1.checkError());
     }
     System.out.println("In the first file:  " + Files.readString(first, ISO_8859_1).strip());
+    System.out.println();
 
     Path second = Path.of("target/price-new-buffered-writer.txt");
     try (PrintWriter latin1 = new PrintWriter(Files.newBufferedWriter(second, ISO_8859_1))) {

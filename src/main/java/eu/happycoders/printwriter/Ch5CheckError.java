@@ -25,19 +25,20 @@ public class Ch5CheckError {
     System.out.println("checkError(): " + closed.checkError());
 
     System.out.println("== The euro sign in ISO-8859-1");
-    Path file = Path.of("target/price-latin1.txt");
-    try (PrintWriter latin1 = new PrintWriter(file.toFile(), ISO_8859_1)) {
+    Path first = Path.of("target/price-file-constructor.txt");
+    try (PrintWriter latin1 = new PrintWriter(first.toFile(), ISO_8859_1)) {
       latin1.println("Preis: 5 €");
       System.out.println("new PrintWriter(File, ISO_8859_1), checkError(): " + latin1.checkError());
     }
-    System.out.println("In the file: " + Files.readString(file, ISO_8859_1).strip());
+    System.out.println("In the first file:  " + Files.readString(first, ISO_8859_1).strip());
 
-    try (PrintWriter latin1 = new PrintWriter(Files.newBufferedWriter(file, ISO_8859_1))) {
+    Path second = Path.of("target/price-new-buffered-writer.txt");
+    try (PrintWriter latin1 = new PrintWriter(Files.newBufferedWriter(second, ISO_8859_1))) {
       latin1.println("Preis: 5 €");
       System.out.println(
           "Files.newBufferedWriter(), checkError():          " + latin1.checkError());
     }
-    System.out.println("In the file: \"" + Files.readString(file, ISO_8859_1) + "\"");
+    System.out.println("In the second file: \"" + Files.readString(second, ISO_8859_1) + "\"");
   }
 
   /** A writer that fails like a disk that is full or a connection that broke off. */

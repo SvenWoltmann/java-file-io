@@ -31,7 +31,7 @@
          unit-test in them. -->
     <sonar.coverage.exclusions>**/*.java</sonar.coverage.exclusions>
 
-    <sonar.issue.ignore.multicriteria>e1,e2,e3</sonar.issue.ignore.multicriteria>
+    <sonar.issue.ignore.multicriteria>e1,e2,e3,e4</sonar.issue.ignore.multicriteria>
     <!-- The examples print their results; System.out is the program's output, not logging. -->
     <sonar.issue.ignore.multicriteria.e1.ruleKey>java:S106</sonar.issue.ignore.multicriteria.e1.ruleKey>
     <sonar.issue.ignore.multicriteria.e1.resourceKey>**/*.java</sonar.issue.ignore.multicriteria.e1.resourceKey>
@@ -43,6 +43,10 @@
          article shows. -->
     <sonar.issue.ignore.multicriteria.e3.ruleKey>java:S2095</sonar.issue.ignore.multicriteria.e3.ruleKey>
     <sonar.issue.ignore.multicriteria.e3.resourceKey>**/Ch10Mistakes.java</sonar.issue.ignore.multicriteria.e3.resourceKey>
+    <!-- Ch3Printf passes two arguments for three format specifiers on purpose: the
+         MissingFormatArgumentException is what the article shows. -->
+    <sonar.issue.ignore.multicriteria.e4.ruleKey>java:S2275</sonar.issue.ignore.multicriteria.e4.ruleKey>
+    <sonar.issue.ignore.multicriteria.e4.resourceKey>**/Ch3Printf.java</sonar.issue.ignore.multicriteria.e4.resourceKey>
   </properties>
 
   <dependencies>

@@ -20,7 +20,7 @@ public class Ch9PrintStream {
     stream.print("first line\nsecond line\n");
     writer.print("first line\nsecond line\n");
     System.out.println(
-        "print(\"…\\n…\\n\"): PrintStream "
+        "print(\"...\\n...\\n\"): PrintStream "
             + streamCounter.flushes
             + " flush(es), PrintWriter "
             + writerCounter.flushes);
@@ -28,7 +28,7 @@ public class Ch9PrintStream {
     stream.print('x');
     writer.print('x');
     System.out.println(
-        "print('x'):        PrintStream "
+        "print('x'):          PrintStream "
             + streamCounter.flushes
             + " flush(es), PrintWriter "
             + writerCounter.flushes);
@@ -36,14 +36,14 @@ public class Ch9PrintStream {
     stream.println("third line");
     writer.println("third line");
     System.out.println(
-        "println(…):        PrintStream "
+        "println(...):        PrintStream "
             + streamCounter.flushes
             + " flush(es), PrintWriter "
             + writerCounter.flushes);
 
     stream.write(0x41);
     stream.write('\n');
-    System.out.println("write('\\n'):       PrintStream " + streamCounter.flushes + " flush(es)");
+    System.out.println("write('\\n'):         PrintStream " + streamCounter.flushes + " flush(es)");
 
     stream.close();
     writer.close();

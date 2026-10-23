@@ -21,13 +21,13 @@ public class Ch4Flush {
     System.out.println("== With autoFlush");
     try (PrintWriter out = new PrintWriter(Files.newBufferedWriter(file), true)) {
       out.print("2026-10-17 08:15:07 ");
-      System.out.println("After print():   " + Files.size(file) + " bytes");
+      System.out.println("After print():      " + Files.size(file) + " bytes");
       out.println("INFO  GET /java/java-bufferedreader/ 200");
-      System.out.println("After println(): " + Files.size(file) + " bytes");
+      System.out.println("After println():    " + Files.size(file) + " bytes");
       out.print("2026-10-17 08:15:09 WARN  GET /java/bufferedreader/ 404\n");
-      System.out.println("After print(…\\n): " + Files.size(file) + " bytes");
+      System.out.println("After print(...\\n): " + Files.size(file) + " bytes");
       out.printf("%s %-5s %s%n", "2026-10-17 08:15:11", "INFO", "GET /java/java-streams/ 200");
-      System.out.println("After printf():  " + Files.size(file) + " bytes");
+      System.out.println("After printf():     " + Files.size(file) + " bytes");
     }
   }
 }

@@ -8,10 +8,11 @@ import java.util.random.RandomGeneratorFactory;
 /**
  * Creates the text the benchmarks write, in memory.
  *
- * <p>{@link #lines()} produces the lines of the test file of the java-bufferedreader repository:
- * the same generator, the same seed, so written with a {@code '\n'} after every line, they make up
- * the same 100,000,000 bytes of UTF-8 text. The lines are 0 to 160 characters long, 80 on average;
- * one character in a hundred is a German umlaut.
+ * <p>{@link #lines()} produces the lines of the test file that {@code
+ * eu.happycoders.bufferedreader.benchmark.ReadBenchmark} reads: the same generator, the same seed,
+ * so written with a {@code '\n'} after every line, they make up the same 100,000,000 bytes of UTF-8
+ * text. The lines are 0 to 160 characters long, 80 on average; one character in a hundred is a
+ * German umlaut.
  *
  * <p>{@link #logEntries(int)} produces log entries with a timestamp, a level and a message for the
  * benchmarks that format.

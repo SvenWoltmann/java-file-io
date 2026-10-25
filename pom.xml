@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>eu.happycoders</groupId>
-  <artifactId>java-serialization</artifactId>
+  <artifactId>java-file-io</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
@@ -13,37 +13,72 @@
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+    <jmh.version>1.37</jmh.version>
+
     <!-- Plugin versions -->
     <surefire-plugin.version>3.6.0</surefire-plugin.version>
+    <shade-plugin.version>3.6.2</shade-plugin.version>
     <spotless.version>3.10.4</spotless.version>
     <google-java-format.version>1.36.1</google-java-format.version>
     <jacoco.version>0.8.15</jacoco.version>
 
     <!-- SonarQube Cloud setup -->
-    <sonar.projectKey>SvenWoltmann_java-serialization</sonar.projectKey>
+    <sonar.projectKey>SvenWoltmann_java-file-io</sonar.projectKey>
     <sonar.organization>svenwoltmann</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     <sonar.coverage.jacoco.xmlReportPaths>${project.reporting.outputDirectory}/jacoco-ut/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
-    <!-- The classes are the runnable listings of the article; there is nothing to unit-test in them. -->
+    <!-- The classes are the runnable listings and benchmarks of the articles; there is nothing to
+         unit-test in them. -->
     <sonar.coverage.exclusions>**/*.java</sonar.coverage.exclusions>
 
-    <sonar.issue.ignore.multicriteria>e1,e2,e3,e4</sonar.issue.ignore.multicriteria>
+    <sonar.issue.ignore.multicriteria>e1,e2,e3,e4,e5,e6,e7,e8</sonar.issue.ignore.multicriteria>
     <!-- The examples print their results; System.out is the program's output, not logging. -->
     <sonar.issue.ignore.multicriteria.e1.ruleKey>java:S106</sonar.issue.ignore.multicriteria.e1.ruleKey>
     <sonar.issue.ignore.multicriteria.e1.resourceKey>**/*.java</sonar.issue.ignore.multicriteria.e1.resourceKey>
-    <!-- Ch2Reading reads several objects until the EOFException ends the loop: that is the form the
-         article shows before it recommends writing one list instead. -->
-    <sonar.issue.ignore.multicriteria.e2.ruleKey>java:S2189</sonar.issue.ignore.multicriteria.e2.ruleKey>
-    <sonar.issue.ignore.multicriteria.e2.resourceKey>**/Ch2Reading.java</sonar.issue.ignore.multicriteria.e2.resourceKey>
-    <!-- The superclass in inheritance/nodefault has no no-arg constructor on purpose: the
-         "no valid constructor" exception when reading is the point of the listing. -->
-    <sonar.issue.ignore.multicriteria.e3.ruleKey>java:S2055</sonar.issue.ignore.multicriteria.e3.ruleKey>
-    <sonar.issue.ignore.multicriteria.e3.resourceKey>**/inheritance/nodefault/*.java</sonar.issue.ignore.multicriteria.e3.resourceKey>
-    <!-- OrderService.Draft is an inner class on purpose: the NotSerializableException for the
-         outer class is what the article shows; the text names "static" as the fix. -->
-    <sonar.issue.ignore.multicriteria.e4.ruleKey>java:S2066</sonar.issue.ignore.multicriteria.e4.ruleKey>
-    <sonar.issue.ignore.multicriteria.e4.resourceKey>**/special/OrderService.java</sonar.issue.ignore.multicriteria.e4.resourceKey>
+    <!-- printwriter.Ch8Console wraps System.out and must not close it: closing the PrintWriter would
+         close System.out. -->
+    <sonar.issue.ignore.multicriteria.e2.ruleKey>java:S2095</sonar.issue.ignore.multicriteria.e2.ruleKey>
+    <sonar.issue.ignore.multicriteria.e2.resourceKey>**/printwriter/Ch8Console.java</sonar.issue.ignore.multicriteria.e2.resourceKey>
+    <!-- printwriter.Ch10Mistakes forgets to close the PrintWriter on purpose: the empty file is the
+         mistake the article shows. -->
+    <sonar.issue.ignore.multicriteria.e3.ruleKey>java:S2095</sonar.issue.ignore.multicriteria.e3.ruleKey>
+    <sonar.issue.ignore.multicriteria.e3.resourceKey>**/printwriter/Ch10Mistakes.java</sonar.issue.ignore.multicriteria.e3.resourceKey>
+    <!-- printwriter.Ch3Printf passes two arguments for three format specifiers on purpose: the
+         MissingFormatArgumentException is what the article shows. -->
+    <sonar.issue.ignore.multicriteria.e4.ruleKey>java:S2275</sonar.issue.ignore.multicriteria.e4.ruleKey>
+    <sonar.issue.ignore.multicriteria.e4.resourceKey>**/printwriter/Ch3Printf.java</sonar.issue.ignore.multicriteria.e4.resourceKey>
+    <!-- bufferedreader.Ch10Mistakes calls readLine() in the loop condition and throws the line away
+         on purpose: the lost lines are the mistake the article shows. -->
+    <sonar.issue.ignore.multicriteria.e5.ruleKey>java:S2677</sonar.issue.ignore.multicriteria.e5.ruleKey>
+    <sonar.issue.ignore.multicriteria.e5.resourceKey>**/bufferedreader/Ch10Mistakes.java</sonar.issue.ignore.multicriteria.e5.resourceKey>
+    <!-- serialization.Ch2Reading reads several objects until the EOFException ends the loop: that is
+         the form the article shows before it recommends writing one list instead. -->
+    <sonar.issue.ignore.multicriteria.e6.ruleKey>java:S2189</sonar.issue.ignore.multicriteria.e6.ruleKey>
+    <sonar.issue.ignore.multicriteria.e6.resourceKey>**/serialization/Ch2Reading.java</sonar.issue.ignore.multicriteria.e6.resourceKey>
+    <!-- The superclass in serialization.inheritance.nodefault has no no-arg constructor on purpose:
+         the "no valid constructor" exception when reading is the point of the listing. -->
+    <sonar.issue.ignore.multicriteria.e7.ruleKey>java:S2055</sonar.issue.ignore.multicriteria.e7.ruleKey>
+    <sonar.issue.ignore.multicriteria.e7.resourceKey>**/serialization/inheritance/nodefault/*.java</sonar.issue.ignore.multicriteria.e7.resourceKey>
+    <!-- serialization.special.OrderService.Draft is an inner class on purpose: the
+         NotSerializableException for the outer class is what the article shows; the text names
+         "static" as the fix. -->
+    <sonar.issue.ignore.multicriteria.e8.ruleKey>java:S2066</sonar.issue.ignore.multicriteria.e8.ruleKey>
+    <sonar.issue.ignore.multicriteria.e8.resourceKey>**/serialization/special/OrderService.java</sonar.issue.ignore.multicriteria.e8.resourceKey>
   </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.openjdk.jmh</groupId>
+      <artifactId>jmh-core</artifactId>
+      <version>${jmh.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openjdk.jmh</groupId>
+      <artifactId>jmh-generator-annprocess</artifactId>
+      <version>${jmh.version}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>
@@ -55,6 +90,17 @@
           <source>${java.version}</source>
           <target>${java.version}</target>
           <encoding>${project.build.sourceEncoding}</encoding>
+          <!-- Since JDK 23, javac no longer discovers annotation processors on the classpath, so
+               JMH's generator has to be named here. Without it the build succeeds but produces a
+               jar without META-INF/BenchmarkList, and every run dies with "Unable to find the
+               resource". -->
+          <annotationProcessorPaths>
+            <path>
+              <groupId>org.openjdk.jmh</groupId>
+              <artifactId>jmh-generator-annprocess</artifactId>
+              <version>${jmh.version}</version>
+            </path>
+          </annotationProcessorPaths>
         </configuration>
       </plugin>
 
@@ -65,6 +111,41 @@
         <configuration>
           <argLine>${surefireArgLine}</argLine>
         </configuration>
+      </plugin>
+
+      <!-- Packages the benchmarks and JMH itself into target/benchmarks.jar, so a run is
+           `java -jar target/benchmarks.jar` under any JDK - the JMH archetype's standard setup. -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>${shade-plugin.version}</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <finalName>benchmarks</finalName>
+              <createDependencyReducedPom>false</createDependencyReducedPom>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <mainClass>org.openjdk.jmh.Main</mainClass>
+                </transformer>
+              </transformers>
+              <filters>
+                <filter>
+                  <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/*.SF</exclude>
+                    <exclude>META-INF/*.DSA</exclude>
+                    <exclude>META-INF/*.RSA</exclude>
+                  </excludes>
+                </filter>
+              </filters>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
 
       <!-- Spotless plugin to verify code style -->

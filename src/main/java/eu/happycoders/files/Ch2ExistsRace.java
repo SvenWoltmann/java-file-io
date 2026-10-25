@@ -1,6 +1,7 @@
 package eu.happycoders.files;
 
 import java.io.IOException;
+import java.io.UncheckedIOException;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -33,8 +34,10 @@ public class Ch2ExistsRace {
                 }
               }
             }
-          } catch (IOException | InterruptedException e) {
-            throw new IllegalStateException(e);
+          } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+          } catch (IOException e) {
+            throw new UncheckedIOException(e);
           }
         };
 

@@ -15,6 +15,7 @@ The code of the HappyCoders.eu article series on files in Java – one package p
 | Java PrintWriter ([English](https://www.happycoders.eu/java/java-printwriter/), [German](https://www.happycoders.eu/de/java/java-printwriter/)) | `eu.happycoders.printwriter` |
 | Serialization in Java ([English](https://www.happycoders.eu/java/java-serialization/), [German](https://www.happycoders.eu/de/java/java-serialisierung/)) | `eu.happycoders.serialization` |
 | Creating, copying, moving, and deleting files and directories (not yet published; [German](https://www.happycoders.eu/de/java/verzeichnisse-listen-dateien-verschieben-kopieren-loeschen/), [English](https://www.happycoders.eu/java/how-to-list-directory-contents-move-copy-delete-files/)) | `eu.happycoders.files` |
+| Listing directory contents (not yet published; [German](https://www.happycoders.eu/de/java/java-verzeichnis-auslesen/), [English](https://www.happycoders.eu/java/java-list-files-in-directory/)) | `eu.happycoders.listing` |
 
 ## Running the examples
 
@@ -102,6 +103,24 @@ Every example starts with a fresh directory `target/logs/` that holds a copy of 
 * `Ch9Delete` – `delete()`, `deleteIfExists()`, `DirectoryNotEmptyException`, deleting a symbolic link, `File.delete()`
 * `Ch10DeleteDirectory` – `deleteDirectory()` with `walkFileTree()` and with `walk()`, and a missing directory
 * `Ch11Links` – `createSymbolicLink()`, `readSymbolicLink()`, `createLink()`, and what survives deleting the original
+
+## Listing directory contents – `eu.happycoders.listing`
+
+The examples list the directory `files/project/`, a small Maven project with five files in three subdirectories. Directories that some examples create themselves end up under `target/`.
+
+* `Intro` – `Files.list()` on the project directory
+* `Ch1List` – `list()` is not recursive, the order is the file system's, `sorted()`, filtering for directories, `NotDirectoryException` and `NoSuchFileException`
+* `Ch1DirectoryStream` – `newDirectoryStream()` with the globs `*.md` and `*.{md,xml}`
+* `Ch1OpenStreams` – opens streams without closing them until the process runs out of file handles
+* `Ch2ListRecursive` – finding `.java` files with `list()` and recursion written by hand
+* `Ch3Walk` – `walk()`, its depth-first order, `maxDepth` 1 and 0, `FOLLOW_LINKS`, and a `FileSystemLoopException`
+* `Ch4WalkFileTree` – `walkFileTree()` with a `SimpleFileVisitor`, a `LoggingVisitor` that numbers every call, `SKIP_SUBTREE`, and `TERMINATE`
+* `Ch5Find` – `find()` by file name, by size, and with `maxDepth` 1
+* `Ch6PathMatcher` – `glob:**/*.java`, a glob on the file name only, and a `regex:` matcher
+* `Ch7AccessDenied` – how `walk()`, `find()`, `walkFileTree()` with and without `visitFileFailed()`, and `list()` with recursion react to a directory without read permission; sets POSIX permissions and runs on Linux and macOS only
+* `Ch8LegacyFile` – `File.list()` and `File.listFiles()`, which return `null` for a missing directory
+
+The outputs of the article's run are in `results/listing/outputs-jdk25.txt`.
 
 ## Benchmarks
 

@@ -1,0 +1,175 @@
+######## Intro
+files/project/pom.xml
+files/project/docs
+files/project/README.md
+files/project/src
+[exit 0]
+######## Ch1List
+== list(project)
+files/project/pom.xml
+files/project/docs
+files/project/README.md
+files/project/src
+== list(project/src)
+files/project/src/util
+files/project/src/Main.java
+== list(project).sorted()
+files/project/README.md
+files/project/docs
+files/project/pom.xml
+files/project/src
+== only directories
+files/project/docs
+files/project/src
+== list() on a file and on a missing directory
+java.nio.file.NotDirectoryException: files/project/pom.xml
+java.nio.file.NoSuchFileException: files/project/test
+[exit 0]
+######## Ch1DirectoryStream
+== newDirectoryStream(project, "*.md")
+files/project/README.md
+== newDirectoryStream(project, "*.{md,xml}")
+files/project/pom.xml
+files/project/README.md
+[exit 0]
+######## Ch1OpenStreams
+122878 streams open, then: java.nio.file.FileSystemException: files/project: Too many open files
+[exit 0]
+######## Ch2ListRecursive
+files/project/src/util/Strings.java
+files/project/src/Main.java
+[exit 0]
+######## Ch3Walk
+== walk(project)
+files/project
+files/project/pom.xml
+files/project/docs
+files/project/docs/setup.md
+files/project/README.md
+files/project/src
+files/project/src/util
+files/project/src/util/Strings.java
+files/project/src/Main.java
+== walk(project): .java files
+files/project/src/util/Strings.java
+files/project/src/Main.java
+== walk(project, 1)
+files/project
+files/project/pom.xml
+files/project/docs
+files/project/README.md
+files/project/src
+== walk(project, 0)
+files/project
+== walk(links)
+target/links
+target/links/shortcut
+target/links/data
+target/links/data/a.txt
+== walk(links, FOLLOW_LINKS)
+target/links
+target/links/shortcut
+target/links/shortcut/a.txt
+target/links/data
+target/links/data/a.txt
+== walk(links, FOLLOW_LINKS) with a loop
+target/links
+target/links/shortcut
+target/links/shortcut/a.txt
+java.nio.file.FileSystemLoopException: target/links/shortcut/loop
+[exit 0]
+######## Ch4WalkFileTree
+== walkFileTree(project): .java files
+files/project/src/util/Strings.java
+files/project/src/Main.java
+== walkFileTree(project): call order
+1. preVisitDirectory(files/project)
+2. visitFile(files/project/pom.xml)
+3. preVisitDirectory(files/project/docs)
+4. visitFile(files/project/docs/setup.md)
+5. postVisitDirectory(files/project/docs)
+6. visitFile(files/project/README.md)
+7. preVisitDirectory(files/project/src)
+8. preVisitDirectory(files/project/src/util)
+9. visitFile(files/project/src/util/Strings.java)
+10. postVisitDirectory(files/project/src/util)
+11. visitFile(files/project/src/Main.java)
+12. postVisitDirectory(files/project/src)
+13. postVisitDirectory(files/project)
+== walkFileTree(project): SKIP_SUBTREE for src
+1. preVisitDirectory(files/project)
+2. visitFile(files/project/pom.xml)
+3. preVisitDirectory(files/project/docs)
+4. visitFile(files/project/docs/setup.md)
+5. postVisitDirectory(files/project/docs)
+6. visitFile(files/project/README.md)
+7. preVisitDirectory(files/project/src)
+8. postVisitDirectory(files/project)
+== walkFileTree(project): TERMINATE at the first .java file
+1. preVisitDirectory(files/project)
+2. visitFile(files/project/pom.xml)
+3. preVisitDirectory(files/project/docs)
+4. visitFile(files/project/docs/setup.md)
+5. postVisitDirectory(files/project/docs)
+6. visitFile(files/project/README.md)
+7. preVisitDirectory(files/project/src)
+8. preVisitDirectory(files/project/src/util)
+9. visitFile(files/project/src/util/Strings.java)
+[exit 0]
+######## Ch5Find
+== find(): .java files
+files/project/src/util/Strings.java
+files/project/src/Main.java
+== find(): files larger than 120 bytes
+files/project/pom.xml
+files/project/README.md
+== find() with maxDepth 1: directories
+files/project
+files/project/docs
+files/project/src
+[exit 0]
+######## Ch6PathMatcher
+== glob:**/*.java
+files/project/src/util/Strings.java
+files/project/src/Main.java
+== glob:*.{md,xml} on the file name
+files/project/pom.xml
+files/project/docs/setup.md
+files/project/README.md
+== regex:.*/src/.*
+files/project/src/util
+files/project/src/util/Strings.java
+files/project/src/Main.java
+[exit 0]
+######## Ch7AccessDenied
+== walk()
+target/restricted
+target/restricted/public
+target/restricted/public/notes.txt
+java.io.UncheckedIOException: java.nio.file.AccessDeniedException: target/restricted/private
+== find()
+target/restricted/public/notes.txt
+java.io.UncheckedIOException: java.nio.file.AccessDeniedException: target/restricted/private
+== walkFileTree() with SimpleFileVisitor
+target/restricted/public/notes.txt
+java.nio.file.AccessDeniedException: target/restricted/private
+== walkFileTree() with visitFileFailed()
+target/restricted/public/notes.txt
+Access denied: target/restricted/private
+== list() with own recursion
+target/restricted/public
+target/restricted/public/notes.txt
+target/restricted/private
+Access denied: target/restricted/private
+[exit 0]
+######## Ch8LegacyFile
+== File.list()
+[pom.xml, docs, README.md, src]
+== File.listFiles()
+files/project/pom.xml (154 bytes)
+files/project/docs/
+files/project/README.md (145 bytes)
+files/project/src/
+== File.listFiles() on a missing directory
+null
+[exit 0]

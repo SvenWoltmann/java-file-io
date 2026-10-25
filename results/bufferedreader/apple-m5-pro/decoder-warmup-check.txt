@@ -1,0 +1,8 @@
+# DecoderWarmupCheck, Apple M5 Pro, JDK 27 (27+35), 2026-10-17
+# one JVM per line; median of 15 measured reads after 15 warm-up reads
+utf8, warm-up blocks 1,024, measured blocks 1,024: 46.8 ms (checksum 10)
+utf8, warm-up blocks 8,192, measured blocks 8,192: 83.5 ms (checksum 40)
+utf8, warm-up blocks 1,024, measured blocks 8,192: 55.6 ms (checksum 525)
+utf8, warm-up blocks 8,192, measured blocks 1,024: 92.1 ms (checksum 525)
+ascii, warm-up blocks 1,024, measured blocks 1,024: 13.8 ms (checksum 590)
+ascii, warm-up blocks 8,192, measured blocks 8,192: 13.1 ms (checksum 440)

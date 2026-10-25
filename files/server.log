@@ -1,0 +1,5 @@
+2026-10-17 08:15:02 INFO  Server started on port 8080
+2026-10-17 08:15:07 INFO  GET /java/java-bufferedreader/ 200
+2026-10-17 08:15:09 WARN  GET /java/bufferedreader/ 404
+2026-10-17 08:15:11 INFO  GET /java/java-streams/ 200
+2026-10-17 08:15:12 ERROR Connection reset by peer

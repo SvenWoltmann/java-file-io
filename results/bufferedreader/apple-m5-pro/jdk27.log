@@ -1,0 +1,1020 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.bufferedreader.benchmark.BufferSizeBenchmark.readLine
+# Parameters: (bufferSize = 256)
+
+# Run progress: 0,00% complete, ETA 00:14:00
+# Fork: 1 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 105,049 ms/op
+# Warmup Iteration   2: 102,352 ms/op
+# Warmup Iteration   3: 101,906 ms/op
+# Warmup Iteration   4: 102,453 ms/op
+# Warmup Iteration   5: 103,017 ms/op
+Iteration   1: 100,936 ms/op
+Iteration   2: 101,784 ms/op
+Iteration   3: 101,194 ms/op
+Iteration   4: 101,755 ms/op
+Iteration   5: 101,601 ms/op
+
+# Run progress: 2,38% complete, ETA 00:14:38
+# Fork: 2 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 105,202 ms/op
+# Warmup Iteration   2: 102,132 ms/op
+# Warmup Iteration   3: 100,672 ms/op
+# Warmup Iteration   4: 104,392 ms/op
+# Warmup Iteration   5: 102,375 ms/op
+Iteration   1: 102,775 ms/op
+Iteration   2: 102,848 ms/op
+Iteration   3: 101,417 ms/op
+Iteration   4: 101,363 ms/op
+Iteration   5: 100,621 ms/op
+
+# Run progress: 4,76% complete, ETA 00:14:00
+# Fork: 3 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 103,789 ms/op
+# Warmup Iteration   2: 100,332 ms/op
+# Warmup Iteration   3: 100,094 ms/op
+# Warmup Iteration   4: 99,852 ms/op
+# Warmup Iteration   5: 99,702 ms/op
+Iteration   1: 99,992 ms/op
+Iteration   2: 99,877 ms/op
+Iteration   3: 99,796 ms/op
+Iteration   4: 99,466 ms/op
+Iteration   5: 100,491 ms/op
+
+
+Result "eu.happycoders.bufferedreader.benchmark.BufferSizeBenchmark.readLine":
+  101,061 ±(99.9%) 1,102 ms/op [Average]
+  (min, avg, max) = (99,466, 101,061, 102,848), stdev = 1,031
+  CI (99.9%): [99,959, 102,163] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.bufferedreader.benchmark.BufferSizeBenchmark.readLine
+# Parameters: (bufferSize = 1024)
+
+# Run progress: 7,14% complete, ETA 00:13:37
+# Fork: 1 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 88,504 ms/op
+# Warmup Iteration   2: 86,005 ms/op
+# Warmup Iteration   3: 85,081 ms/op
+# Warmup Iteration   4: 85,148 ms/op
+# Warmup Iteration   5: 85,692 ms/op
+Iteration   1: 86,222 ms/op
+Iteration   2: 86,210 ms/op
+Iteration   3: 86,564 ms/op
+Iteration   4: 86,828 ms/op
+Iteration   5: 86,088 ms/op
+
+# Run progress: 9,52% complete, ETA 00:13:14
+# Fork: 2 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 88,611 ms/op
+# Warmup Iteration   2: 86,426 ms/op
+# Warmup Iteration   3: 85,968 ms/op
+# Warmup Iteration   4: 85,561 ms/op
+# Warmup Iteration   5: 85,617 ms/op
+Iteration   1: 85,224 ms/op
+Iteration   2: 85,541 ms/op
+Iteration   3: 86,454 ms/op
+Iteration   4: 86,263 ms/op
+Iteration   5: 86,597 ms/op
+
+# Run progress: 11,90% complete, ETA 00:12:52
+# Fork: 3 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 89,304 ms/op
+# Warmup Iteration   2: 88,270 ms/op
+# Warmup Iteration   3: 86,685 ms/op
+# Warmup Iteration   4: 87,269 ms/op
+# Warmup Iteration   5: 87,142 ms/op
+Iteration   1: 87,112 ms/op
+Iteration   2: 87,556 ms/op
+Iteration   3: 87,155 ms/op
+Iteration   4: 87,409 ms/op
+Iteration   5: 87,802 ms/op
+
+
+Result "eu.happycoders.bufferedreader.benchmark.BufferSizeBenchmark.readLine":
+  86,602 ±(99.9%) 0,774 ms/op [Average]
+  (min, avg, max) = (85,224, 86,602, 87,802), stdev = 0,724
+  CI (99.9%): [85,827, 87,376] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.bufferedreader.benchmark.BufferSizeBenchmark.readLine
+# Parameters: (bufferSize = 8192)
+
+# Run progress: 14,29% complete, ETA 00:12:28
+# Fork: 1 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 122,455 ms/op
+# Warmup Iteration   2: 119,874 ms/op
+# Warmup Iteration   3: 119,853 ms/op
+# Warmup Iteration   4: 119,848 ms/op
+# Warmup Iteration   5: 119,804 ms/op
+Iteration   1: 121,759 ms/op
+Iteration   2: 121,976 ms/op
+Iteration   3: 119,948 ms/op
+Iteration   4: 120,099 ms/op
+Iteration   5: 120,669 ms/op
+
+# Run progress: 16,67% complete, ETA 00:12:06
+# Fork: 2 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 125,575 ms/op
+# Warmup Iteration   2: 124,117 ms/op
+# Warmup Iteration   3: 122,886 ms/op
+# Warmup Iteration   4: 122,791 ms/op
+# Warmup Iteration   5: 123,134 ms/op
+Iteration   1: 123,040 ms/op
+Iteration   2: 123,966 ms/op
+Iteration   3: 123,634 ms/op
+Iteration   4: 123,608 ms/op
+Iteration   5: 124,028 ms/op
+
+# Run progress: 19,05% complete, ETA 00:11:47
+# Fork: 3 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 123,023 ms/op
+# Warmup Iteration   2: 120,644 ms/op
+# Warmup Iteration   3: 119,850 ms/op
+# Warmup Iteration   4: 120,169 ms/op
+# Warmup Iteration   5: 120,746 ms/op
+Iteration   1: 120,854 ms/op
+Iteration   2: 120,930 ms/op
+Iteration   3: 121,726 ms/op
+Iteration   4: 119,886 ms/op
+Iteration   5: 120,192 ms/op
+
+
+Result "eu.happycoders.bufferedreader.benchmark.BufferSizeBenchmark.readLine":
+  121,754 ±(99.9%) 1,650 ms/op [Average]
+  (min, avg, max) = (119,886, 121,754, 124,028), stdev = 1,543
+  CI (99.9%): [120,105, 123,404] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.bufferedreader.benchmark.BufferSizeBenchmark.readLine
+# Parameters: (bufferSize = 65536)
+
+# Run progress: 21,43% complete, ETA 00:11:25
+# Fork: 1 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 122,253 ms/op
+# Warmup Iteration   2: 120,462 ms/op
+# Warmup Iteration   3: 119,774 ms/op
+# Warmup Iteration   4: 119,698 ms/op
+# Warmup Iteration   5: 120,719 ms/op
+Iteration   1: 120,665 ms/op
+Iteration   2: 120,516 ms/op
+Iteration   3: 120,409 ms/op
+Iteration   4: 119,791 ms/op
+Iteration   5: 119,657 ms/op
+
+# Run progress: 23,81% complete, ETA 00:11:04
+# Fork: 2 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 126,571 ms/op
+# Warmup Iteration   2: 120,919 ms/op
+# Warmup Iteration   3: 121,447 ms/op
+# Warmup Iteration   4: 121,712 ms/op
+# Warmup Iteration   5: 121,606 ms/op
+Iteration   1: 122,027 ms/op
+Iteration   2: 122,345 ms/op
+Iteration   3: 121,035 ms/op
+Iteration   4: 121,794 ms/op
+Iteration   5: 121,963 ms/op
+
+# Run progress: 26,19% complete, ETA 00:10:43
+# Fork: 3 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 124,685 ms/op
+# Warmup Iteration   2: 122,397 ms/op
+# Warmup Iteration   3: 121,107 ms/op
+# Warmup Iteration   4: 121,544 ms/op
+# Warmup Iteration   5: 123,727 ms/op
+Iteration   1: 122,986 ms/op
+Iteration   2: 121,928 ms/op
+Iteration   3: 121,870 ms/op
+Iteration   4: 120,617 ms/op
+Iteration   5: 122,307 ms/op
+
+
+Result "eu.happycoders.bufferedreader.benchmark.BufferSizeBenchmark.readLine":
+  121,327 ±(99.9%) 1,076 ms/op [Average]
+  (min, avg, max) = (119,657, 121,327, 122,986), stdev = 1,007
+  CI (99.9%): [120,251, 122,404] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.bufferedreader.benchmark.BufferSizeBenchmark.readLine
+# Parameters: (bufferSize = 1048576)
+
+# Run progress: 28,57% complete, ETA 00:10:23
+# Fork: 1 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 123,034 ms/op
+# Warmup Iteration   2: 125,915 ms/op
+# Warmup Iteration   3: 123,882 ms/op
+# Warmup Iteration   4: 123,335 ms/op
+# Warmup Iteration   5: 122,520 ms/op
+Iteration   1: 122,863 ms/op
+Iteration   2: 119,275 ms/op
+Iteration   3: 118,099 ms/op
+Iteration   4: 119,131 ms/op
+Iteration   5: 122,148 ms/op
+
+# Run progress: 30,95% complete, ETA 00:10:02
+# Fork: 2 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 124,288 ms/op
+# Warmup Iteration   2: 119,503 ms/op
+# Warmup Iteration   3: 119,583 ms/op
+# Warmup Iteration   4: 118,838 ms/op
+# Warmup Iteration   5: 119,020 ms/op
+Iteration   1: 120,316 ms/op
+Iteration   2: 129,208 ms/op
+Iteration   3: 120,824 ms/op
+Iteration   4: 119,229 ms/op
+Iteration   5: 119,076 ms/op
+
+# Run progress: 33,33% complete, ETA 00:09:41
+# Fork: 3 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 125,573 ms/op
+# Warmup Iteration   2: 122,945 ms/op
+# Warmup Iteration   3: 123,211 ms/op
+# Warmup Iteration   4: 127,363 ms/op
+# Warmup Iteration   5: 123,635 ms/op
+Iteration   1: 121,687 ms/op
+Iteration   2: 122,029 ms/op
+Iteration   3: 120,722 ms/op
+Iteration   4: 120,866 ms/op
+Iteration   5: 122,033 ms/op
+
+
+Result "eu.happycoders.bufferedreader.benchmark.BufferSizeBenchmark.readLine":
+  121,167 ±(99.9%) 2,809 ms/op [Average]
+  (min, avg, max) = (118,099, 121,167, 129,208), stdev = 2,627
+  CI (99.9%): [118,358, 123,976] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.bufferedreader.benchmark.ReadBenchmark.bufferedReaderLines
+
+# Run progress: 35,71% complete, ETA 00:09:20
+# Fork: 1 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 128,024 ms/op
+# Warmup Iteration   2: 124,909 ms/op
+# Warmup Iteration   3: 124,960 ms/op
+# Warmup Iteration   4: 124,416 ms/op
+# Warmup Iteration   5: 125,039 ms/op
+Iteration   1: 125,012 ms/op
+Iteration   2: 125,237 ms/op
+Iteration   3: 124,641 ms/op
+Iteration   4: 124,540 ms/op
+Iteration   5: 124,695 ms/op
+
+# Run progress: 38,10% complete, ETA 00:09:00
+# Fork: 2 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 128,655 ms/op
+# Warmup Iteration   2: 125,365 ms/op
+# Warmup Iteration   3: 124,677 ms/op
+# Warmup Iteration   4: 124,764 ms/op
+# Warmup Iteration   5: 124,410 ms/op
+Iteration   1: 124,463 ms/op
+Iteration   2: 124,421 ms/op
+Iteration   3: 125,536 ms/op
+Iteration   4: 125,783 ms/op
+Iteration   5: 125,443 ms/op
+
+# Run progress: 40,48% complete, ETA 00:08:39
+# Fork: 3 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 129,200 ms/op
+# Warmup Iteration   2: 124,658 ms/op
+# Warmup Iteration   3: 122,523 ms/op
+# Warmup Iteration   4: 122,650 ms/op
+# Warmup Iteration   5: 123,016 ms/op
+Iteration   1: 122,021 ms/op
+Iteration   2: 122,276 ms/op
+Iteration   3: 123,122 ms/op
+Iteration   4: 123,200 ms/op
+Iteration   5: 125,119 ms/op
+
+
+Result "eu.happycoders.bufferedreader.benchmark.ReadBenchmark.bufferedReaderLines":
+  124,367 ±(99.9%) 1,255 ms/op [Average]
+  (min, avg, max) = (122,021, 124,367, 125,783), stdev = 1,174
+  CI (99.9%): [123,113, 125,622] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.bufferedreader.benchmark.ReadBenchmark.bufferedReaderRead
+
+# Run progress: 42,86% complete, ETA 00:08:18
+# Fork: 1 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 561,012 ms/op
+# Warmup Iteration   2: 565,945 ms/op
+# Warmup Iteration   3: 560,113 ms/op
+# Warmup Iteration   4: 564,295 ms/op
+# Warmup Iteration   5: 563,102 ms/op
+Iteration   1: 559,757 ms/op
+Iteration   2: 561,884 ms/op
+Iteration   3: 561,356 ms/op
+Iteration   4: 557,992 ms/op
+Iteration   5: 560,189 ms/op
+
+# Run progress: 45,24% complete, ETA 00:08:00
+# Fork: 2 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 564,186 ms/op
+# Warmup Iteration   2: 557,823 ms/op
+# Warmup Iteration   3: 557,985 ms/op
+# Warmup Iteration   4: 562,690 ms/op
+# Warmup Iteration   5: 559,961 ms/op
+Iteration   1: 560,165 ms/op
+Iteration   2: 561,549 ms/op
+Iteration   3: 576,101 ms/op
+Iteration   4: 559,655 ms/op
+Iteration   5: 557,166 ms/op
+
+# Run progress: 47,62% complete, ETA 00:07:41
+# Fork: 3 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 558,365 ms/op
+# Warmup Iteration   2: 556,354 ms/op
+# Warmup Iteration   3: 553,423 ms/op
+# Warmup Iteration   4: 555,415 ms/op
+# Warmup Iteration   5: 561,727 ms/op
+Iteration   1: 565,080 ms/op
+Iteration   2: 559,463 ms/op
+Iteration   3: 554,016 ms/op
+Iteration   4: 556,100 ms/op
+Iteration   5: 556,126 ms/op
+
+
+Result "eu.happycoders.bufferedreader.benchmark.ReadBenchmark.bufferedReaderRead":
+  560,440 ±(99.9%) 5,485 ms/op [Average]
+  (min, avg, max) = (554,016, 560,440, 576,101), stdev = 5,131
+  CI (99.9%): [554,955, 565,925] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.bufferedreader.benchmark.ReadBenchmark.bufferedReaderReadAllLines
+
+# Run progress: 50,00% complete, ETA 00:07:21
+# Fork: 1 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 145,004 ms/op
+# Warmup Iteration   2: 140,597 ms/op
+# Warmup Iteration   3: 141,528 ms/op
+# Warmup Iteration   4: 136,731 ms/op
+# Warmup Iteration   5: 141,179 ms/op
+Iteration   1: 136,790 ms/op
+Iteration   2: 137,029 ms/op
+Iteration   3: 132,214 ms/op
+Iteration   4: 136,692 ms/op
+Iteration   5: 132,785 ms/op
+
+# Run progress: 52,38% complete, ETA 00:07:00
+# Fork: 2 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 150,078 ms/op
+# Warmup Iteration   2: 142,505 ms/op
+# Warmup Iteration   3: 143,830 ms/op
+# Warmup Iteration   4: 139,286 ms/op
+# Warmup Iteration   5: 142,152 ms/op
+Iteration   1: 138,729 ms/op
+Iteration   2: 134,510 ms/op
+Iteration   3: 131,451 ms/op
+Iteration   4: 136,281 ms/op
+Iteration   5: 132,501 ms/op
+
+# Run progress: 54,76% complete, ETA 00:06:39
+# Fork: 3 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 150,056 ms/op
+# Warmup Iteration   2: 139,865 ms/op
+# Warmup Iteration   3: 144,486 ms/op
+# Warmup Iteration   4: 137,267 ms/op
+# Warmup Iteration   5: 139,466 ms/op
+Iteration   1: 137,359 ms/op
+Iteration   2: 146,943 ms/op
+Iteration   3: 126,877 ms/op
+Iteration   4: 136,992 ms/op
+Iteration   5: 133,135 ms/op
+
+
+Result "eu.happycoders.bufferedreader.benchmark.ReadBenchmark.bufferedReaderReadAllLines":
+  135,353 ±(99.9%) 4,757 ms/op [Average]
+  (min, avg, max) = (126,877, 135,353, 146,943), stdev = 4,450
+  CI (99.9%): [130,595, 140,110] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.bufferedreader.benchmark.ReadBenchmark.bufferedReaderReadArray
+
+# Run progress: 57,14% complete, ETA 00:06:18
+# Fork: 1 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 105,024 ms/op
+# Warmup Iteration   2: 104,633 ms/op
+# Warmup Iteration   3: 104,390 ms/op
+# Warmup Iteration   4: 104,164 ms/op
+# Warmup Iteration   5: 104,267 ms/op
+Iteration   1: 104,179 ms/op
+Iteration   2: 104,326 ms/op
+Iteration   3: 105,914 ms/op
+Iteration   4: 104,127 ms/op
+Iteration   5: 104,042 ms/op
+
+# Run progress: 59,52% complete, ETA 00:05:57
+# Fork: 2 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 104,764 ms/op
+# Warmup Iteration   2: 104,250 ms/op
+# Warmup Iteration   3: 103,979 ms/op
+# Warmup Iteration   4: 104,063 ms/op
+# Warmup Iteration   5: 104,191 ms/op
+Iteration   1: 104,080 ms/op
+Iteration   2: 104,037 ms/op
+Iteration   3: 104,392 ms/op
+Iteration   4: 103,992 ms/op
+Iteration   5: 105,395 ms/op
+
+# Run progress: 61,90% complete, ETA 00:05:36
+# Fork: 3 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 104,840 ms/op
+# Warmup Iteration   2: 103,994 ms/op
+# Warmup Iteration   3: 103,903 ms/op
+# Warmup Iteration   4: 103,872 ms/op
+# Warmup Iteration   5: 104,155 ms/op
+Iteration   1: 103,559 ms/op
+Iteration   2: 104,282 ms/op
+Iteration   3: 103,825 ms/op
+Iteration   4: 104,830 ms/op
+Iteration   5: 104,037 ms/op
+
+
+Result "eu.happycoders.bufferedreader.benchmark.ReadBenchmark.bufferedReaderReadArray":
+  104,335 ±(99.9%) 0,654 ms/op [Average]
+  (min, avg, max) = (103,559, 104,335, 105,914), stdev = 0,612
+  CI (99.9%): [103,680, 104,989] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.bufferedreader.benchmark.ReadBenchmark.bufferedReaderReadLine
+
+# Run progress: 64,29% complete, ETA 00:05:15
+# Fork: 1 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 127,951 ms/op
+# Warmup Iteration   2: 121,535 ms/op
+# Warmup Iteration   3: 123,364 ms/op
+# Warmup Iteration   4: 120,339 ms/op
+# Warmup Iteration   5: 127,003 ms/op
+Iteration   1: 122,354 ms/op
+Iteration   2: 131,362 ms/op
+Iteration   3: 131,448 ms/op
+Iteration   4: 124,704 ms/op
+Iteration   5: 121,290 ms/op
+
+# Run progress: 66,67% complete, ETA 00:04:54
+# Fork: 2 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 127,087 ms/op
+# Warmup Iteration   2: 124,393 ms/op
+# Warmup Iteration   3: 132,751 ms/op
+# Warmup Iteration   4: 124,506 ms/op
+# Warmup Iteration   5: 123,017 ms/op
+Iteration   1: 122,949 ms/op
+Iteration   2: 123,479 ms/op
+Iteration   3: 123,323 ms/op
+Iteration   4: 122,767 ms/op
+Iteration   5: 122,320 ms/op
+
+# Run progress: 69,05% complete, ETA 00:04:33
+# Fork: 3 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 127,080 ms/op
+# Warmup Iteration   2: 124,081 ms/op
+# Warmup Iteration   3: 123,786 ms/op
+# Warmup Iteration   4: 121,654 ms/op
+# Warmup Iteration   5: 121,590 ms/op
+Iteration   1: 121,957 ms/op
+Iteration   2: 122,604 ms/op
+Iteration   3: 121,733 ms/op
+Iteration   4: 121,669 ms/op
+Iteration   5: 121,811 ms/op
+
+
+Result "eu.happycoders.bufferedreader.benchmark.ReadBenchmark.bufferedReaderReadLine":
+  123,718 ±(99.9%) 3,460 ms/op [Average]
+  (min, avg, max) = (121,290, 123,718, 131,448), stdev = 3,237
+  CI (99.9%): [120,258, 127,179] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.bufferedreader.benchmark.ReadBenchmark.fileReaderRead
+
+# Run progress: 71,43% complete, ETA 00:04:12
+# Fork: 1 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 816,416 ms/op
+# Warmup Iteration   2: 781,388 ms/op
+# Warmup Iteration   3: 781,239 ms/op
+# Warmup Iteration   4: 781,876 ms/op
+# Warmup Iteration   5: 782,129 ms/op
+Iteration   1: 783,096 ms/op
+Iteration   2: 781,772 ms/op
+Iteration   3: 781,258 ms/op
+Iteration   4: 781,872 ms/op
+Iteration   5: 782,665 ms/op
+
+# Run progress: 73,81% complete, ETA 00:03:52
+# Fork: 2 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 817,720 ms/op
+# Warmup Iteration   2: 784,123 ms/op
+# Warmup Iteration   3: 783,939 ms/op
+# Warmup Iteration   4: 786,262 ms/op
+# Warmup Iteration   5: 783,352 ms/op
+Iteration   1: 787,043 ms/op
+Iteration   2: 783,648 ms/op
+Iteration   3: 784,644 ms/op
+Iteration   4: 781,746 ms/op
+Iteration   5: 782,992 ms/op
+
+# Run progress: 76,19% complete, ETA 00:03:31
+# Fork: 3 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 814,081 ms/op
+# Warmup Iteration   2: 779,511 ms/op
+# Warmup Iteration   3: 781,122 ms/op
+# Warmup Iteration   4: 779,719 ms/op
+# Warmup Iteration   5: 781,136 ms/op
+Iteration   1: 779,476 ms/op
+Iteration   2: 780,099 ms/op
+Iteration   3: 781,494 ms/op
+Iteration   4: 786,577 ms/op
+Iteration   5: 782,991 ms/op
+
+
+Result "eu.happycoders.bufferedreader.benchmark.ReadBenchmark.fileReaderRead":
+  782,758 ±(99.9%) 2,250 ms/op [Average]
+  (min, avg, max) = (779,476, 782,758, 787,043), stdev = 2,104
+  CI (99.9%): [780,509, 785,008] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.bufferedreader.benchmark.ReadBenchmark.filesNewBufferedReaderReadLine
+
+# Run progress: 78,57% complete, ETA 00:03:11
+# Fork: 1 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 123,726 ms/op
+# Warmup Iteration   2: 121,242 ms/op
+# Warmup Iteration   3: 121,644 ms/op
+# Warmup Iteration   4: 121,578 ms/op
+# Warmup Iteration   5: 122,091 ms/op
+Iteration   1: 121,928 ms/op
+Iteration   2: 122,149 ms/op
+Iteration   3: 120,366 ms/op
+Iteration   4: 120,318 ms/op
+Iteration   5: 121,161 ms/op
+
+# Run progress: 80,95% complete, ETA 00:02:49
+# Fork: 2 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 124,503 ms/op
+# Warmup Iteration   2: 121,864 ms/op
+# Warmup Iteration   3: 122,088 ms/op
+# Warmup Iteration   4: 123,930 ms/op
+# Warmup Iteration   5: 122,406 ms/op
+Iteration   1: 124,514 ms/op
+Iteration   2: 123,582 ms/op
+Iteration   3: 123,513 ms/op
+Iteration   4: 127,788 ms/op
+Iteration   5: 124,015 ms/op
+
+# Run progress: 83,33% complete, ETA 00:02:28
+# Fork: 3 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 127,349 ms/op
+# Warmup Iteration   2: 124,792 ms/op
+# Warmup Iteration   3: 123,583 ms/op
+# Warmup Iteration   4: 122,907 ms/op
+# Warmup Iteration   5: 123,312 ms/op
+Iteration   1: 122,835 ms/op
+Iteration   2: 122,986 ms/op
+Iteration   3: 123,658 ms/op
+Iteration   4: 122,708 ms/op
+Iteration   5: 123,043 ms/op
+
+
+Result "eu.happycoders.bufferedreader.benchmark.ReadBenchmark.filesNewBufferedReaderReadLine":
+  122,971 ±(99.9%) 1,954 ms/op [Average]
+  (min, avg, max) = (120,318, 122,971, 127,788), stdev = 1,828
+  CI (99.9%): [121,017, 124,925] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.bufferedreader.benchmark.ReadBenchmark.inputStreamReaderRead
+
+# Run progress: 85,71% complete, ETA 00:02:07
+# Fork: 1 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 811,259 ms/op
+# Warmup Iteration   2: 785,942 ms/op
+# Warmup Iteration   3: 786,673 ms/op
+# Warmup Iteration   4: 786,096 ms/op
+# Warmup Iteration   5: 791,158 ms/op
+Iteration   1: 786,283 ms/op
+Iteration   2: 785,570 ms/op
+Iteration   3: 787,200 ms/op
+Iteration   4: 785,449 ms/op
+Iteration   5: 827,411 ms/op
+
+# Run progress: 88,10% complete, ETA 00:01:46
+# Fork: 2 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 828,043 ms/op
+# Warmup Iteration   2: 780,838 ms/op
+# Warmup Iteration   3: 781,963 ms/op
+# Warmup Iteration   4: 779,795 ms/op
+# Warmup Iteration   5: 780,037 ms/op
+Iteration   1: 781,315 ms/op
+Iteration   2: 781,835 ms/op
+Iteration   3: 779,820 ms/op
+Iteration   4: 781,294 ms/op
+Iteration   5: 780,317 ms/op
+
+# Run progress: 90,48% complete, ETA 00:01:25
+# Fork: 3 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 818,674 ms/op
+# Warmup Iteration   2: 791,208 ms/op
+# Warmup Iteration   3: 786,973 ms/op
+# Warmup Iteration   4: 796,421 ms/op
+# Warmup Iteration   5: 786,629 ms/op
+Iteration   1: 802,285 ms/op
+Iteration   2: 793,074 ms/op
+Iteration   3: 789,830 ms/op
+Iteration   4: 791,172 ms/op
+Iteration   5: 788,502 ms/op
+
+
+Result "eu.happycoders.bufferedreader.benchmark.ReadBenchmark.inputStreamReaderRead":
+  789,424 ±(99.9%) 12,892 ms/op [Average]
+  (min, avg, max) = (779,820, 789,424, 827,411), stdev = 12,059
+  CI (99.9%): [776,532, 802,316] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 27, OpenJDK 64-Bit Server VM, 27+35-2325
+# VM invoker: /Users/sven/.sdkman/candidates/java/27-open/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: eu.happycoders.bufferedreader.benchmark.ReadBenchmark.scannerNextLine
+
+# Run progress: 92,86% complete, ETA 00:01:04
+# Fork: 1 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 300,896 ms/op
+# Warmup Iteration   2: 289,019 ms/op
+# Warmup Iteration   3: 288,789 ms/op
+# Warmup Iteration   4: 290,479 ms/op
+# Warmup Iteration   5: 288,733 ms/op
+Iteration   1: 288,772 ms/op
+Iteration   2: 288,408 ms/op
+Iteration   3: 288,021 ms/op
+Iteration   4: 288,117 ms/op
+Iteration   5: 288,248 ms/op
+
+# Run progress: 95,24% complete, ETA 00:00:42
+# Fork: 2 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 301,234 ms/op
+# Warmup Iteration   2: 291,227 ms/op
+# Warmup Iteration   3: 290,726 ms/op
+# Warmup Iteration   4: 290,237 ms/op
+# Warmup Iteration   5: 288,760 ms/op
+Iteration   1: 286,392 ms/op
+Iteration   2: 286,324 ms/op
+Iteration   3: 284,116 ms/op
+Iteration   4: 284,231 ms/op
+Iteration   5: 283,730 ms/op
+
+# Run progress: 97,62% complete, ETA 00:00:21
+# Fork: 3 of 3
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/sven/Projects/HappyCoders/git-articles/java-bufferedreader/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 294,008 ms/op
+# Warmup Iteration   2: 295,011 ms/op
+# Warmup Iteration   3: 303,930 ms/op
+# Warmup Iteration   4: 287,417 ms/op
+# Warmup Iteration   5: 284,843 ms/op
+Iteration   1: 285,459 ms/op
+Iteration   2: 284,720 ms/op
+Iteration   3: 285,073 ms/op
+Iteration   4: 288,780 ms/op
+Iteration   5: 289,787 ms/op
+
+
+Result "eu.happycoders.bufferedreader.benchmark.ReadBenchmark.scannerNextLine":
+  286,678 ±(99.9%) 2,160 ms/op [Average]
+  (min, avg, max) = (283,730, 286,678, 289,787), stdev = 2,020
+  CI (99.9%): [284,519, 288,838] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:14:59
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                     (bufferSize)  Mode  Cnt    Score    Error  Units
+BufferSizeBenchmark.readLine                           256  avgt   15  101,061 ±  1,102  ms/op
+BufferSizeBenchmark.readLine                          1024  avgt   15   86,602 ±  0,774  ms/op
+BufferSizeBenchmark.readLine                          8192  avgt   15  121,754 ±  1,650  ms/op
+BufferSizeBenchmark.readLine                         65536  avgt   15  121,327 ±  1,076  ms/op
+BufferSizeBenchmark.readLine                       1048576  avgt   15  121,167 ±  2,809  ms/op
+ReadBenchmark.bufferedReaderLines                      N/A  avgt   15  124,367 ±  1,255  ms/op
+ReadBenchmark.bufferedReaderRead                       N/A  avgt   15  560,440 ±  5,485  ms/op
+ReadBenchmark.bufferedReaderReadAllLines               N/A  avgt   15  135,353 ±  4,757  ms/op
+ReadBenchmark.bufferedReaderReadArray                  N/A  avgt   15  104,335 ±  0,654  ms/op
+ReadBenchmark.bufferedReaderReadLine                   N/A  avgt   15  123,718 ±  3,460  ms/op
+ReadBenchmark.fileReaderRead                           N/A  avgt   15  782,758 ±  2,250  ms/op
+ReadBenchmark.filesNewBufferedReaderReadLine           N/A  avgt   15  122,971 ±  1,954  ms/op
+ReadBenchmark.inputStreamReaderRead                    N/A  avgt   15  789,424 ± 12,892  ms/op
+ReadBenchmark.scannerNextLine                          N/A  avgt   15  286,678 ±  2,160  ms/op
+
+Benchmark result is saved to results/apple-m5-pro/jdk27.json

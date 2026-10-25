@@ -1,0 +1,5 @@
+buffer       256 chars: 1,222,747 lines, 12,208 reads from the file, 8,191.3 bytes per read
+buffer     1,024 chars: 1,222,747 lines, 12,208 reads from the file, 8,191.3 bytes per read
+buffer     8,192 chars: 1,222,747 lines, 12,208 reads from the file, 8,191.3 bytes per read
+buffer    65,536 chars: 1,222,747 lines, 12,208 reads from the file, 8,191.3 bytes per read
+buffer 1,048,576 chars: 1,222,747 lines, 12,208 reads from the file, 8,191.3 bytes per read

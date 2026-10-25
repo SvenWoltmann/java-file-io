@@ -1,0 +1,178 @@
+######## Intro
+server.log (0 bytes)
+server.log.1 (276 bytes)
+[exit 0]
+######## Ch1FilesVsFile
+== renameTo() vs. move()
+renameTo(): false
+move():     java.nio.file.NoSuchFileException: target/logs/server.log -> target/nowhere/server.log
+== delete() vs. delete()
+File.delete():  false
+Files.delete(): java.nio.file.NoSuchFileException: target/logs/missing.log
+[exit 0]
+######## Ch2Exists
+== exists(), isRegularFile(), isDirectory(), notExists()
+exists(log):          true
+isRegularFile(log):   true
+isDirectory(log):     false
+isDirectory(logDir):  true
+exists(missing):      false
+notExists(missing):   true
+== a symbolic link whose target is gone
+exists(link):                 true
+exists(link) after delete:    false
+exists(link, NOFOLLOW_LINKS): true
+isSymbolicLink(link):         true
+== existence cannot be determined
+exists(secret):    false
+notExists(secret): false
+[exit 0]
+######## Ch2ExistsRace
+10000 files, 8114 times notExists() was true and createFile() failed
+[exit 0]
+######## Ch3CreateFile
+== createFile()
+target/logs/app.log: 0 bytes
+== createFile() on an existing file
+java.nio.file.FileAlreadyExistsException: target/logs/app.log
+== createFile() in a missing directory
+java.nio.file.NoSuchFileException: target/logs/2026/app.log
+== create if not exists
+Run 1: created target/logs/audit.log
+Run 2: target/logs/audit.log already exists
+== writeString() creates the file
+target/logs/notes.txt: 17 bytes
+java.nio.file.FileAlreadyExistsException: target/logs/notes.txt
+== createFile() with permissions
+rw-------
+rw-r--r--
+== File.createNewFile()
+createNewFile(): false
+[exit 0]
+######## Ch4CreateDirectory
+== createDirectory()
+isDirectory(archive): true
+== createDirectory() twice
+java.nio.file.FileAlreadyExistsException: target/logs/archive
+== createDirectory() without parent
+java.nio.file.NoSuchFileException: target/logs/archive/2026/10
+== createDirectories()
+archive/
+archive/2026/
+archive/2026/10/
+server.log (276 bytes)
+== createDirectories() where a file is
+java.nio.file.FileAlreadyExistsException: target/logs/server.log
+== File.mkdir() and mkdirs()
+mkdir():  false
+mkdirs(): false
+[exit 0]
+######## Ch5TempFiles
+== createTempFile() in the temp directory
+java.io.tmpdir = /var/folders/wt/np9sw9515z117kn393z4t4k00000gn/T/
+/var/folders/wt/np9sw9515z117kn393z4t4k00000gn/T/upload-4246935524777762602.part 0 bytes rw-------
+/var/folders/wt/np9sw9515z117kn393z4t4k00000gn/T/upload-18357882370562085565.part 0 bytes rw-------
+/var/folders/wt/np9sw9515z117kn393z4t4k00000gn/T/upload-17065267188166140955.part 0 bytes rw-------
+== createTempFile() in a directory of your choice
+target/logs/server-4934174218935654835.part
+== createTempDirectory()
+/var/folders/wt/np9sw9515z117kn393z4t4k00000gn/T/rotation-8207933558315944489 rwx------
+== clean up with try/finally
+Written: 54 bytes
+exists(tempFile): false
+[exit 0]
+######## Ch6Copy
+== copy() into a directory
+target/logs/archive/server.log: 276 bytes
+== copy() with the directory as target
+java.nio.file.FileAlreadyExistsException: target/logs/archive
+== copy() onto an existing file
+java.nio.file.FileAlreadyExistsException: target/logs/archive/server.log
+Replaced: target/logs/archive/server.log
+== COPY_ATTRIBUTES
+Source:          2026-10-17T06:15:12Z
+Copy:            2026-10-25T18:13:07.733076214Z
+COPY_ATTRIBUTES: 2026-10-17T06:15:12Z
+== a symbolic link as source
+isSymbolicLink(followed):    false
+isSymbolicLink(notFollowed): true
+readSymbolicLink(notFollowed): server.log
+== copy(InputStream, Path)
+276 bytes copied
+== copy(Path, OutputStream)
+2026-10-17 08:15:02 INFO  Server started on port 8080
+2026-10-17 08:15:07 INFO  GET /java/java-bufferedreader/ 200
+2026-10-17 08:15:09 WARN  GET /java/bufferedreader/ 404
+2026-10-17 08:15:11 INFO  GET /java/java-streams/ 200
+2026-10-17 08:15:12 ERROR Connection reset by peer
+== mismatch()
+mismatch(log, copy):     -1
+after the change:        20
+isSameFile(log, copy):   false
+isSameFile(log, link):   true
+[exit 0]
+######## Ch7CopyDirectory
+== copy() on a directory
+== copyDirectory()
+archive/
+archive/2026-10/
+archive/2026-10/server.log.1 (276 bytes)
+archive/2026-10/server.log.2 (276 bytes)
+server.log (276 bytes)
+[exit 0]
+######## Ch8Move
+== move() into a directory
+archive/
+archive/server.log (276 bytes)
+== rename with resolveSibling()
+archive/
+archive/server.log.1 (276 bytes)
+== move() a directory
+old/
+old/server.log.1 (276 bytes)
+== move() onto an existing file
+java.nio.file.FileAlreadyExistsException: target/logs/old/server.log.1
+old/
+old/server.log.1 (276 bytes)
+== write to a temp file, then ATOMIC_MOVE
+port=8443
+app.properties (10 bytes)
+old/
+old/server.log.1 (276 bytes)
+[exit 0]
+######## Ch9Delete
+== delete()
+exists(log): false
+== delete() twice
+java.nio.file.NoSuchFileException: target/logs/server.log
+== deleteIfExists()
+deleteIfExists(log): false
+== delete() on a directory with contents
+java.nio.file.DirectoryNotEmptyException: target/logs/archive
+== delete() on a symbolic link
+archive/
+archive/server.log.1 (276 bytes)
+== File.delete()
+File.delete(): false
+[exit 0]
+######## Ch10DeleteDirectory
+== deleteDirectory()
+server.log (276 bytes)
+== deleteDirectoryWithWalk()
+server.log (276 bytes)
+== deleteDirectory() on a missing directory
+java.nio.file.NoSuchFileException: target/logs/archive
+[exit 0]
+######## Ch11Links
+== createSymbolicLink()
+readSymbolicLink(): server.log
+isSymbolicLink():   true
+size(link):         276
+isSameFile():       true
+== createLink()
+isSymbolicLink():   false
+isSameFile():       true
+== after deleting the original
+size(hardLink): 276
+exists(link):   false
+[exit 0]

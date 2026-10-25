@@ -1,0 +1,7 @@
+1222747 lines
+PrintWriter -> OutputStreamWriter:
+  2,445,494 calls to the OutputStreamWriter, 195,317 writes to the OutputStream
+PrintWriter -> BufferedWriter -> OutputStreamWriter:
+  12,088 calls to the OutputStreamWriter, 12,208 writes to the OutputStream
+PrintWriter(autoFlush) -> BufferedWriter -> OutputStreamWriter:
+  1,222,747 calls to the OutputStreamWriter, 1,222,747 writes to the OutputStream

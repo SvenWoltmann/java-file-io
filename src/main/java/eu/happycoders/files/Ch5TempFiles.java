@@ -31,9 +31,7 @@ public class Ch5TempFiles {
     System.out.println("== createTempDirectory()");
     Path workDir = Files.createTempDirectory("rotation-");
     System.out.println(
-        workDir.getFileName()
-            + " "
-            + PosixFilePermissions.toString(Files.getPosixFilePermissions(workDir)));
+        workDir + " " + PosixFilePermissions.toString(Files.getPosixFilePermissions(workDir)));
     Files.delete(workDir);
 
     System.out.println("== clean up with try/finally");

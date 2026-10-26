@@ -70,11 +70,13 @@ public class Ch6Copy {
     Files.copy(unpacked, System.out);
 
     System.out.println("== mismatch()");
-    System.out.println("mismatch(log, copy):     " + Files.mismatch(log, copy));
+    System.out.println("mismatch(log, copy):   " + Files.mismatch(log, copy));
+    System.out.println("isSameFile(log, copy): " + Files.isSameFile(log, copy));
     String changed = Files.readString(copy).replaceFirst("INFO ", "WARN ");
     Files.writeString(copy, changed);
-    System.out.println("after the change:        " + Files.mismatch(log, copy));
-    System.out.println("isSameFile(log, copy):   " + Files.isSameFile(log, copy));
-    System.out.println("isSameFile(log, link):   " + Files.isSameFile(log, link));
+    System.out.println("After the change:");
+    System.out.println("mismatch(log, copy):   " + Files.mismatch(log, copy));
+    System.out.println("isSameFile(log, copy): " + Files.isSameFile(log, copy));
+    System.out.println("isSameFile(log, link): " + Files.isSameFile(log, link));
   }
 }

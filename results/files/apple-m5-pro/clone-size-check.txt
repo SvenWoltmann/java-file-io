@@ -1,0 +1,3 @@
+1,000,000 bytes: median 114 µs, min 89 µs, max 201 µs
+100,000,000 bytes: median 102 µs, min 85 µs, max 436 µs
+1,000,000,000 bytes: median 109 µs, min 88 µs, max 160 µs

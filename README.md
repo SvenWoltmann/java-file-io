@@ -133,7 +133,7 @@ Each article's JMH benchmarks are in the `benchmark` subpackage of its package:
 * `WriteBenchmark` – writing 1,222,747 lines, 100,000,000 bytes of UTF-8 text, with `BufferedWriter`, with a `PrintWriter` around `Files.newBufferedWriter()`, around a file name, and around a `FileWriter`, with autoFlush, and with a `PrintStream`; the lines are those of the test file that `ReadBenchmark` reads
 * `FormatBenchmark` – writing 1,000,000 log lines with `printf()`, with `println()` and string concatenation, and with one `print()` call per field, with and without a `BufferedWriter` below the `PrintWriter`
 * `WriteCallCounter` – not JMH: counts the write calls that arrive at the `OutputStreamWriter` and at the `OutputStream` below it when a `PrintWriter` writes the test lines, with and without a `BufferedWriter` and with autoFlush
-* `CopyBenchmark` – copies a file of 100,000,000 bytes with `Files.copy()`, with `Files.copy()` and `COPY_ATTRIBUTES` (a clone on APFS since Java 20), with `InputStream.transferTo()`, with `FileChannel.transferTo()`, and with a buffer loop of 8,192 bytes
+* `CopyBenchmark` – copies a file of 100,000,000 bytes with `Files.copy()`, with `Files.copy()` and `COPY_ATTRIBUTES` (a clone on APFS since Java 20), with `InputStream.transferTo()`, with `FileChannel.transferTo()`, and with a loop that copies through an 8,192-byte buffer from a `FileInputStream` to a `FileOutputStream`; the teardown forces each copy to disk before deleting it
 
 `mvn package` builds `target/benchmarks.jar` with all of them. Run the benchmarks of one article with its package as filter – a bare class name like `ReadBenchmark` can match more than you expect:
 

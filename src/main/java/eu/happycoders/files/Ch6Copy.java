@@ -74,7 +74,7 @@ public class Ch6Copy {
     System.out.println("isSameFile(log, copy): " + Files.isSameFile(log, copy));
     String changed = Files.readString(copy).replaceFirst("INFO ", "WARN ");
     Files.writeString(copy, changed);
-    System.out.println("After the change:");
+    System.out.println("\nAfter the change:");
     System.out.println("mismatch(log, copy):   " + Files.mismatch(log, copy));
     System.out.println("isSameFile(log, copy): " + Files.isSameFile(log, copy));
     System.out.println("isSameFile(log, link): " + Files.isSameFile(log, link));

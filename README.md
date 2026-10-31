@@ -13,6 +13,7 @@ The code of the HappyCoders.eu article series on files in Java – one package p
 |---|---|
 | Java BufferedReader ([English](https://www.happycoders.eu/java/java-bufferedreader/), [German](https://www.happycoders.eu/de/java/java-bufferedreader/)) | `eu.happycoders.bufferedreader` |
 | Java PrintWriter ([English](https://www.happycoders.eu/java/java-printwriter/), [German](https://www.happycoders.eu/de/java/java-printwriter/)) | `eu.happycoders.printwriter` |
+| Java FileReader (not yet published; [German](https://www.happycoders.eu/de/java/java-filereader/)) | `eu.happycoders.filereader` |
 | Serialization in Java ([English](https://www.happycoders.eu/java/java-serialization/), [German](https://www.happycoders.eu/de/java/java-serialisierung/)) | `eu.happycoders.serialization` |
 | Creating, copying, moving, and deleting files and directories (not yet published; [German](https://www.happycoders.eu/de/java/verzeichnisse-listen-dateien-verschieben-kopieren-loeschen/), [English](https://www.happycoders.eu/java/how-to-list-directory-contents-move-copy-delete-files/)) | `eu.happycoders.files` |
 | Listing directory contents (not yet published; [German](https://www.happycoders.eu/de/java/java-verzeichnis-auslesen/), [English](https://www.happycoders.eu/java/java-list-files-in-directory/)) | `eu.happycoders.listing` |
@@ -62,6 +63,24 @@ Most examples write the small log file `target/server.log`, the file the Buffere
 * `Ch8Console` – a `PrintWriter` around `System.out` and `System.console().writer()`
 * `Ch9PrintStream` – how often a `PrintStream` and a `PrintWriter`, both with autoFlush, flush their stream
 * `Ch10Mistakes` – a `PrintWriter` that is never closed leaves the file empty
+
+## Java FileReader – `eu.happycoders.filereader`
+
+Most examples read the small log file `files/server.log`.
+
+* `Intro` – reads the log file with `readAllAsString()` (Java 25)
+* `Ch1Creating` – a `FileReader` from a file name, a `File`, and a `Path`, `getEncoding()` for different charsets, and files that cannot be opened
+* `Ch2Read` – `read()` character by character, and an emoji arriving as two halves of a surrogate pair
+* `Ch2ReadArray` – `read(char[])` in blocks, and what is left in the array after the last block
+* `Ch2ReadAll` – `readAllLines()` and `readAllAsString()` (Java 25), also after `skip()`
+* `Ch2TransferTo` – re-encoding a file from ISO-8859-1 to UTF-8 with `transferTo()`
+* `Ch2Unsupported` – `mark()` and `reset()` are not supported
+* `Ch3Replacement` – a Latin-1 file read as UTF-8: replacement characters from a `FileReader`, a `MalformedInputException` from an `InputStreamReader` with a reporting decoder
+* `Ch3Bom` – a UTF-8 byte order mark arrives as the first character
+* `Ch4InputStreamReader` – a classpath resource read with an `InputStreamReader`, and an unknown charset name
+* `Ch5BufferedReader` – a `BufferedReader` around a `FileReader`
+* `Ch6Binary` – a binary file read with a `FileReader` and with a `FileInputStream`
+* `Ch8Closing` – reading after `close()`, and open file descriptors of `FileReader`s that are never closed (Linux and macOS)
 
 ## Serialization – `eu.happycoders.serialization`
 

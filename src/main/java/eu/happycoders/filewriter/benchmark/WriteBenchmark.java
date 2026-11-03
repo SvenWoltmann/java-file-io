@@ -22,8 +22,9 @@ import org.openjdk.jmh.annotations.Warmup;
  * Writes the 1,222,747 lines of the test text - 100,000,000 bytes as UTF-8, the text of the
  * PrintWriter benchmarks - to a file with a {@link FileWriter}: character by character, line by
  * line, and in blocks of 8,192 characters, and with a {@link BufferedWriter} around the {@code
- * FileWriter} character by character and line by line. Every benchmark creates the file anew and
- * closes it at the end; it measures up to the close, not until the bytes are on the SSD.
+ * FileWriter} character by character and line by line, also with a {@code flush()} after every
+ * line. Every benchmark creates the file anew and closes it at the end; it measures up to the
+ * close, not until the bytes are on the SSD.
  */
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.AverageTime)
@@ -93,6 +94,17 @@ public class WriteBenchmark {
       for (String line : lines) {
         writer.write(line);
         writer.newLine();
+      }
+    }
+  }
+
+  @Benchmark
+  public void bufferedWriterFlushEveryLine() throws IOException {
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(file.toFile()))) {
+      for (String line : lines) {
+        writer.write(line);
+        writer.newLine();
+        writer.flush();
       }
     }
   }

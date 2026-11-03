@@ -167,7 +167,7 @@ Each article's JMH benchmarks are in the `benchmark` subpackage of its package:
 * `WriteBenchmark` – writing 1,222,747 lines, 100,000,000 bytes of UTF-8 text, with `BufferedWriter`, with a `PrintWriter` around `Files.newBufferedWriter()`, around a file name, and around a `FileWriter`, with autoFlush, and with a `PrintStream`; the lines are those of the test file that `ReadBenchmark` reads
 * `FormatBenchmark` – writing 1,000,000 log lines with `printf()`, with `println()` and string concatenation, and with one `print()` call per field, with and without a `BufferedWriter` below the `PrintWriter`
 * `WriteCallCounter` – not JMH: counts the write calls that arrive at the `OutputStreamWriter` and at the `OutputStream` below it when a `PrintWriter` writes the test lines, with and without a `BufferedWriter` and with autoFlush
-* `filewriter.benchmark.WriteBenchmark` – writing the same 1,222,747 lines with a `FileWriter` character by character, line by line, and in blocks of 8,192 characters, and with a `BufferedWriter` around the `FileWriter` character by character and line by line
+* `filewriter.benchmark.WriteBenchmark` – writing the same 1,222,747 lines with a `FileWriter` character by character, line by line, and in blocks of 8,192 characters, and with a `BufferedWriter` around the `FileWriter` character by character, line by line, and line by line with a `flush()` after every line
 * `CopyBenchmark` – copies a file of 100,000,000 bytes with `Files.copy()`, with `Files.copy()` and `COPY_ATTRIBUTES` (a clone on APFS since Java 20), with `InputStream.transferTo()`, with `FileChannel.transferTo()`, and with a loop that copies through an 8,192-byte buffer from a `FileInputStream` to a `FileOutputStream`; the teardown forces each copy to disk before deleting it
 * `CloneSizeCheck` – not JMH: clones files of 1,000,000, 100,000,000, and 1,000,000,000 bytes with `Files.copy()` and `COPY_ATTRIBUTES` and prints the median time per size; on APFS it does not depend on the size
 
@@ -181,7 +181,7 @@ java -jar target/benchmarks.jar eu.happycoders.filewriter.benchmark
 java -jar target/benchmarks.jar eu.happycoders.files.benchmark
 ```
 
-The BufferedReader and PrintWriter runs take about 15 minutes each, the copy benchmark about five minutes. Close other applications while they run. The results of the articles' runs are in `results/<package>/`, e.g. `results/printwriter/apple-m5-pro/`.
+The BufferedReader and PrintWriter runs take about 15 minutes each, the FileWriter run about ten minutes, the copy benchmark about five minutes. Close other applications while they run. The results of the articles' runs are in `results/<package>/`, e.g. `results/printwriter/apple-m5-pro/`.
 
 
 <!-- happycoders-resources:start -->

@@ -17,7 +17,7 @@ import java.util.random.RandomGeneratorFactory;
  * <p>{@link #logEntries(int)} produces log entries with a timestamp, a level and a message for the
  * benchmarks that format.
  */
-final class TestText {
+public final class TestText {
 
   static final long FILE_SIZE = 100_000_000;
 
@@ -29,7 +29,7 @@ final class TestText {
 
   record LogEntry(String timestamp, String level, String message) {}
 
-  static String[] lines() {
+  public static String[] lines() {
     RandomGenerator random = RandomGeneratorFactory.of("L64X128MixRandom").create(SEED);
     List<String> lines = new ArrayList<>();
     long bytes = 0;

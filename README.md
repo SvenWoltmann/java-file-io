@@ -14,6 +14,7 @@ The code of the HappyCoders.eu article series on files in Java – one package p
 | Java BufferedReader ([English](https://www.happycoders.eu/java/java-bufferedreader/), [German](https://www.happycoders.eu/de/java/java-bufferedreader/)) | `eu.happycoders.bufferedreader` |
 | Java PrintWriter ([English](https://www.happycoders.eu/java/java-printwriter/), [German](https://www.happycoders.eu/de/java/java-printwriter/)) | `eu.happycoders.printwriter` |
 | Java FileReader (not yet published; [German](https://www.happycoders.eu/de/java/java-filereader/)) | `eu.happycoders.filereader` |
+| Java FileWriter (not yet published; [German](https://www.happycoders.eu/de/java/java-filewriter/)) | `eu.happycoders.filewriter` |
 | Serialization in Java ([English](https://www.happycoders.eu/java/java-serialization/), [German](https://www.happycoders.eu/de/java/java-serialisierung/)) | `eu.happycoders.serialization` |
 | Creating, copying, moving, and deleting files and directories (not yet published; [German](https://www.happycoders.eu/de/java/verzeichnisse-listen-dateien-verschieben-kopieren-loeschen/), [English](https://www.happycoders.eu/java/how-to-list-directory-contents-move-copy-delete-files/)) | `eu.happycoders.files` |
 | Listing directory contents (not yet published; [German](https://www.happycoders.eu/de/java/java-verzeichnis-auslesen/), [English](https://www.happycoders.eu/java/java-list-files-in-directory/)) | `eu.happycoders.listing` |
@@ -81,6 +82,20 @@ Most examples read the small log file `files/server.log`.
 * `Ch5BufferedReader` – a `BufferedReader` around a `FileReader`
 * `Ch6Binary` – a binary file read with a `FileReader` and with a `FileInputStream`
 * `Ch8Closing` – reading after `close()`, and open file descriptors of `FileReader`s that are never closed (Linux and macOS)
+
+## Java FileWriter – `eu.happycoders.filewriter`
+
+Most examples write lines of the log file `files/server.log` into `target/server.log`.
+
+* `Intro` – writes two log lines
+* `Ch1Creating` – a `FileWriter` from a file name, a `File`, and a `Path`, overwriting and appending, appending to a file that does not exist, `getEncoding()`, and files that cannot be created
+* `Ch2Write` – `write(int)` with the two halves of a surrogate pair, with a number, and with a code point; `write(String)` and `append()`, also with `null`
+* `Ch2Flush` – when the bytes reach the file: `flush()`, many short writes through the 512-byte buffer, and one long write that grows it to 8,192 bytes
+* `Ch3Unmappable` – the euro sign in ISO-8859-1: a question mark from a `FileWriter`, an `UnmappableCharacterException` from an `OutputStreamWriter` with a reporting encoder, from `Files.newBufferedWriter()`, and from `Files.writeString()`; half a surrogate pair at the end of a string
+* `Ch4OutputStreamWriter` – an `OutputStreamWriter` around a `GZIPOutputStream`, and an unknown charset name
+* `Ch5BufferedWriter` – a `BufferedWriter` around a `FileWriter`
+* `Ch6Binary` – all 256 byte values written with a `FileWriter` and with a `FileOutputStream`
+* `Ch8Closing` – a `FileWriter` that is never closed leaves the file empty, also after a garbage collection; writing after `close()`
 
 ## Serialization – `eu.happycoders.serialization`
 
@@ -152,6 +167,7 @@ Each article's JMH benchmarks are in the `benchmark` subpackage of its package:
 * `WriteBenchmark` – writing 1,222,747 lines, 100,000,000 bytes of UTF-8 text, with `BufferedWriter`, with a `PrintWriter` around `Files.newBufferedWriter()`, around a file name, and around a `FileWriter`, with autoFlush, and with a `PrintStream`; the lines are those of the test file that `ReadBenchmark` reads
 * `FormatBenchmark` – writing 1,000,000 log lines with `printf()`, with `println()` and string concatenation, and with one `print()` call per field, with and without a `BufferedWriter` below the `PrintWriter`
 * `WriteCallCounter` – not JMH: counts the write calls that arrive at the `OutputStreamWriter` and at the `OutputStream` below it when a `PrintWriter` writes the test lines, with and without a `BufferedWriter` and with autoFlush
+* `filewriter.benchmark.WriteBenchmark` – writing the same 1,222,747 lines with a `FileWriter` character by character, line by line, and in blocks of 8,192 characters, and with a `BufferedWriter` around the `FileWriter` character by character and line by line
 * `CopyBenchmark` – copies a file of 100,000,000 bytes with `Files.copy()`, with `Files.copy()` and `COPY_ATTRIBUTES` (a clone on APFS since Java 20), with `InputStream.transferTo()`, with `FileChannel.transferTo()`, and with a loop that copies through an 8,192-byte buffer from a `FileInputStream` to a `FileOutputStream`; the teardown forces each copy to disk before deleting it
 * `CloneSizeCheck` – not JMH: clones files of 1,000,000, 100,000,000, and 1,000,000,000 bytes with `Files.copy()` and `COPY_ATTRIBUTES` and prints the median time per size; on APFS it does not depend on the size
 
@@ -161,6 +177,7 @@ Each article's JMH benchmarks are in the `benchmark` subpackage of its package:
 mvn package
 java -jar target/benchmarks.jar eu.happycoders.bufferedreader.benchmark
 java -jar target/benchmarks.jar eu.happycoders.printwriter.benchmark
+java -jar target/benchmarks.jar eu.happycoders.filewriter.benchmark
 java -jar target/benchmarks.jar eu.happycoders.files.benchmark
 ```
 

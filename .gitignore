@@ -10,3 +10,6 @@ target
 *.bin
 *.ser
 .junie
+
+# written by eu.happycoders.workingdirectory.Ch4UserDirOption
+/via-io.txt

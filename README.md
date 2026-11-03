@@ -18,6 +18,7 @@ The code of the HappyCoders.eu article series on files in Java – one package p
 | Serialization in Java ([English](https://www.happycoders.eu/java/java-serialization/), [German](https://www.happycoders.eu/de/java/java-serialisierung/)) | `eu.happycoders.serialization` |
 | Creating, copying, moving, and deleting files and directories (not yet published; [German](https://www.happycoders.eu/de/java/verzeichnisse-listen-dateien-verschieben-kopieren-loeschen/), [English](https://www.happycoders.eu/java/how-to-list-directory-contents-move-copy-delete-files/)) | `eu.happycoders.files` |
 | Listing directory contents (not yet published; [German](https://www.happycoders.eu/de/java/java-verzeichnis-auslesen/), [English](https://www.happycoders.eu/java/java-list-files-in-directory/)) | `eu.happycoders.listing` |
+| How to get the current working directory (not yet published; [German](https://www.happycoders.eu/de/java/java-arbeitsverzeichnis/)) | `eu.happycoders.workingdirectory` |
 
 ## Running the examples
 
@@ -155,6 +156,21 @@ The examples list the directory `files/project/`, a small Maven project with fiv
 * `Ch8LegacyFile` – `File.list()` and `File.listFiles()`, which return `null` for a missing directory
 
 The outputs of the article's run are in `results/listing/outputs-jdk25.txt`.
+
+## Current working directory – `eu.happycoders.workingdirectory`
+
+Most examples run in the repository root. Some only show their point when started somewhere else; the class comment says where, and the article shows the command. `REPO` stands for the absolute path of the repository root.
+
+* `Intro` – the working directory from `Path.of("").toAbsolutePath()` and from `user.dir`
+* `Ch1Reading` – `user.dir`, `Path.of("")`, `new File("")`, and `Path.of(".")` and `new File(".")` with their trailing `/.`, cleaned up with `normalize()` and `getCanonicalPath()`
+* `Ch1EmptyFile` – `exists()`, `isDirectory()`, and `list()` of `new File("")`; the article also shows the output of the same code on Java 24, where all three treat the empty path as a file that does not exist
+* `Ch1SymbolicLink` – `user.dir` against the shell's `PWD`; start it in `/tmp` on macOS with `java -cp $REPO/target/classes ...`
+* `Ch2RelativePaths` – reads `files/server.log` through a relative path; start it in the repository root and in `target/` (with `-cp classes`)
+* `Ch3SetProperty` – `System.setProperty("user.dir", ...)` changes the property, but not what `File` and `Path` resolve against
+* `Ch4UserDirOption` – start it in the repository root with `-Duser.dir=$REPO/target -cp $REPO/target/classes`: `Files.writeString()` writes `via-nio.txt` into `target/`, a `FileOutputStream` writes `via-io.txt` into the repository root
+* `Ch5BaseDirectory` – resolves `files/server.log` against `APP_HOME`; start it in `target/` with `APP_HOME=..`
+* `Ch5Resource` – loads `defaults.properties` from the class path; start it in any directory
+* `Ch5ChildProcess` – `pwd` in a child process, with and without `ProcessBuilder.directory()` (Linux and macOS)
 
 ## Benchmarks
 

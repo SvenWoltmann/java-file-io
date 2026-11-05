@@ -13,12 +13,12 @@ The code of the HappyCoders.eu article series on files in Java – one package p
 |---|---|
 | Java BufferedReader ([English](https://www.happycoders.eu/java/java-bufferedreader/), [German](https://www.happycoders.eu/de/java/java-bufferedreader/)) | `eu.happycoders.bufferedreader` |
 | Java PrintWriter ([English](https://www.happycoders.eu/java/java-printwriter/), [German](https://www.happycoders.eu/de/java/java-printwriter/)) | `eu.happycoders.printwriter` |
-| Java FileReader (not yet published; [German](https://www.happycoders.eu/de/java/java-filereader/)) | `eu.happycoders.filereader` |
-| Java FileWriter (not yet published; [German](https://www.happycoders.eu/de/java/java-filewriter/)) | `eu.happycoders.filewriter` |
+| Java FileReader ([English](https://www.happycoders.eu/java/java-filereader/), [German](https://www.happycoders.eu/de/java/java-filereader/)) | `eu.happycoders.filereader` |
+| Java FileWriter ([English](https://www.happycoders.eu/java/java-filewriter/), [German](https://www.happycoders.eu/de/java/java-filewriter/)) | `eu.happycoders.filewriter` |
 | Serialization in Java ([English](https://www.happycoders.eu/java/java-serialization/), [German](https://www.happycoders.eu/de/java/java-serialisierung/)) | `eu.happycoders.serialization` |
-| Creating, copying, moving, and deleting files and directories (not yet published; [German](https://www.happycoders.eu/de/java/verzeichnisse-listen-dateien-verschieben-kopieren-loeschen/), [English](https://www.happycoders.eu/java/how-to-list-directory-contents-move-copy-delete-files/)) | `eu.happycoders.files` |
-| Listing directory contents (not yet published; [German](https://www.happycoders.eu/de/java/java-verzeichnis-auslesen/), [English](https://www.happycoders.eu/java/java-list-files-in-directory/)) | `eu.happycoders.listing` |
-| How to get the current working directory (not yet published; [English](https://www.happycoders.eu/java/java-current-working-directory/), [German](https://www.happycoders.eu/de/java/java-arbeitsverzeichnis/)) | `eu.happycoders.workingdirectory` |
+| Creating, copying, moving, and deleting files and directories ([English](https://www.happycoders.eu/java/how-to-list-directory-contents-move-copy-delete-files/), [German](https://www.happycoders.eu/de/java/verzeichnisse-listen-dateien-verschieben-kopieren-loeschen/)) | `eu.happycoders.files` |
+| Listing directory contents ([English](https://www.happycoders.eu/java/java-list-files-in-directory/), [German](https://www.happycoders.eu/de/java/java-verzeichnis-auslesen/)) | `eu.happycoders.listing` |
+| How to get the current working directory ([English](https://www.happycoders.eu/java/java-current-working-directory/), [German](https://www.happycoders.eu/de/java/java-arbeitsverzeichnis/)) | `eu.happycoders.workingdirectory` |
 
 ## Running the examples
 

@@ -31,7 +31,7 @@
          unit-test in them. -->
     <sonar.coverage.exclusions>**/*.java</sonar.coverage.exclusions>
 
-    <sonar.issue.ignore.multicriteria>e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13,e14,e15,e16</sonar.issue.ignore.multicriteria>
+    <sonar.issue.ignore.multicriteria>e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13,e14,e15,e16,e17</sonar.issue.ignore.multicriteria>
     <!-- The examples print their results; System.out is the program's output, not logging. -->
     <sonar.issue.ignore.multicriteria.e1.ruleKey>java:S106</sonar.issue.ignore.multicriteria.e1.ruleKey>
     <sonar.issue.ignore.multicriteria.e1.resourceKey>**/*.java</sonar.issue.ignore.multicriteria.e1.resourceKey>
@@ -98,6 +98,10 @@
          it stays in OrderWithReadObject, whose readObject() has to assign it after reading. -->
     <sonar.issue.ignore.multicriteria.e16.ruleKey>java:S9438</sonar.issue.ignore.multicriteria.e16.ruleKey>
     <sonar.issue.ignore.multicriteria.e16.resourceKey>**/serialization/transients/Order.java</sonar.issue.ignore.multicriteria.e16.resourceKey>
+    <!-- workingdirectory.Ch5ChildProcess starts "pwd" by name, looked up in PATH: the article shows
+         the command as readers type it, and the program only prints a directory. -->
+    <sonar.issue.ignore.multicriteria.e17.ruleKey>java:S4036</sonar.issue.ignore.multicriteria.e17.ruleKey>
+    <sonar.issue.ignore.multicriteria.e17.resourceKey>**/workingdirectory/Ch5ChildProcess.java</sonar.issue.ignore.multicriteria.e17.resourceKey>
   </properties>
 
   <dependencies>

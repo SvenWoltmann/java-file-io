@@ -56,7 +56,7 @@ public class Ch1Creating {
 
     System.out.println("== Files that cannot be created");
     File readOnly = new File("target/read-only.txt");
-    readOnly.delete();
+    Files.deleteIfExists(readOnly.toPath());
     readOnly.createNewFile();
     readOnly.setReadOnly();
     for (String fileName :

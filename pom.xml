@@ -31,7 +31,7 @@
          unit-test in them. -->
     <sonar.coverage.exclusions>**/*.java</sonar.coverage.exclusions>
 
-    <sonar.issue.ignore.multicriteria>e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11</sonar.issue.ignore.multicriteria>
+    <sonar.issue.ignore.multicriteria>e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13,e14,e15,e16</sonar.issue.ignore.multicriteria>
     <!-- The examples print their results; System.out is the program's output, not logging. -->
     <sonar.issue.ignore.multicriteria.e1.ruleKey>java:S106</sonar.issue.ignore.multicriteria.e1.ruleKey>
     <sonar.issue.ignore.multicriteria.e1.resourceKey>**/*.java</sonar.issue.ignore.multicriteria.e1.resourceKey>
@@ -77,6 +77,27 @@
          loop: the "too many open files" error is what the article shows. -->
     <sonar.issue.ignore.multicriteria.e11.ruleKey>java:S2189</sonar.issue.ignore.multicriteria.e11.ruleKey>
     <sonar.issue.ignore.multicriteria.e11.resourceKey>**/listing/Ch1OpenStreams.java</sonar.issue.ignore.multicriteria.e11.resourceKey>
+    <!-- filewriter.Ch1Creating creates a read-only file with createNewFile() and setReadOnly() and
+         leaves their return values unchecked: the article shows these two lines as the setup of the
+         failing writes, and the third write proves the file is read-only. -->
+    <sonar.issue.ignore.multicriteria.e12.ruleKey>java:S899</sonar.issue.ignore.multicriteria.e12.ruleKey>
+    <sonar.issue.ignore.multicriteria.e12.resourceKey>**/filewriter/Ch1Creating.java</sonar.issue.ignore.multicriteria.e12.resourceKey>
+    <!-- filewriter.Ch8Closing never closes a FileWriter on purpose: the bytes that stay in the buffer
+         even after a garbage collection are what the article shows. -->
+    <sonar.issue.ignore.multicriteria.e13.ruleKey>java:S2095</sonar.issue.ignore.multicriteria.e13.ruleKey>
+    <sonar.issue.ignore.multicriteria.e13.resourceKey>**/filewriter/Ch8Closing.java</sonar.issue.ignore.multicriteria.e13.resourceKey>
+    <!-- filereader.Ch8Closing never closes 100 FileReaders on purpose: the open file descriptors are
+         what the article shows. -->
+    <sonar.issue.ignore.multicriteria.e14.ruleKey>java:S2095</sonar.issue.ignore.multicriteria.e14.ruleKey>
+    <sonar.issue.ignore.multicriteria.e14.resourceKey>**/filereader/Ch8Closing.java</sonar.issue.ignore.multicriteria.e14.resourceKey>
+    <!-- filereader.Ch8Closing calls read() only to provoke an exception (after close()) or to open the
+         file for real (in the loop); the character itself does not matter. -->
+    <sonar.issue.ignore.multicriteria.e15.ruleKey>java:S2677</sonar.issue.ignore.multicriteria.e15.ruleKey>
+    <sonar.issue.ignore.multicriteria.e15.resourceKey>**/filereader/Ch8Closing.java</sonar.issue.ignore.multicriteria.e15.resourceKey>
+    <!-- serialization.transients.Order keeps "listeners" non-final: the article shows the field as
+         it stays in OrderWithReadObject, whose readObject() has to assign it after reading. -->
+    <sonar.issue.ignore.multicriteria.e16.ruleKey>java:S9438</sonar.issue.ignore.multicriteria.e16.ruleKey>
+    <sonar.issue.ignore.multicriteria.e16.resourceKey>**/serialization/transients/Order.java</sonar.issue.ignore.multicriteria.e16.resourceKey>
   </properties>
 
   <dependencies>

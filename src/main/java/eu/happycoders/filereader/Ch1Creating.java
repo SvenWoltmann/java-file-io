@@ -19,7 +19,9 @@ public class Ch1Creating {
         FileReader fromPath = new FileReader(log.toFile())) {
       // all three read the same file
       System.out.println(
-          "" + (char) fromName.read() + (char) fromFile.read() + (char) fromPath.read());
+          Character.toString(fromName.read())
+              + Character.toString(fromFile.read())
+              + Character.toString(fromPath.read()));
     }
 
     System.out.println("== getEncoding()");

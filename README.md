@@ -11,6 +11,7 @@ The code of the HappyCoders.eu article series on files in Java – one package p
 
 | Article | Package |
 |---|---|
+| Java File I/O: Files, Streams, Readers, and Writers at a Glance – the overview of the series ([English](https://www.happycoders.eu/java/java-file-io/), [German](https://www.happycoders.eu/de/java/java-file-io/)) | `eu.happycoders.overview` |
 | Java BufferedReader ([English](https://www.happycoders.eu/java/java-bufferedreader/), [German](https://www.happycoders.eu/de/java/java-bufferedreader/)) | `eu.happycoders.bufferedreader` |
 | Java PrintWriter ([English](https://www.happycoders.eu/java/java-printwriter/), [German](https://www.happycoders.eu/de/java/java-printwriter/)) | `eu.happycoders.printwriter` |
 | Java FileReader ([English](https://www.happycoders.eu/java/java-filereader/), [German](https://www.happycoders.eu/de/java/java-filereader/)) | `eu.happycoders.filereader` |
@@ -29,6 +30,19 @@ java -cp target/classes eu.happycoders.<package>.<ClassName>
 ```
 
 Files the examples create go into `target/`; the serialization examples write their `.ser` files into the current directory.
+
+## Java File I/O overview – `eu.happycoders.overview`
+
+The examples read the small log file `files/server.log` and write into `target/`.
+
+* `Intro` – writes a string to a file with `Files.writeString()` and reads it back with `Files.readString()`
+* `Ch1Tasks` – the one-liners of the task table: reading, writing, appending, checking, creating, copying, moving, deleting, and listing
+* `Ch2TwoApis` – `File.delete()` and `File.listFiles()` return `false` and `null`, `Files.delete()` and `Files.list()` throw an exception that names the reason
+* `Ch3StreamModel` – the word “Grüße” read as bytes with a `FileInputStream` and as characters with a `FileReader`, and read through a `BufferedReader` around an `InputStreamReader` around a `FileInputStream`
+* `Ch4Reading` – counts the lines per log level with `Files.lines()` and `groupingBy()`
+* `Ch5Writing` – writes the counts with a `PrintWriter` around `Files.newBufferedWriter()`
+* `Ch6Exceptions` – a missing file, a directory, and an ISO-8859-1 file read as UTF-8 with `Files.lines()`
+* `Ch7Console` – `IO.readln()` and `IO.println()` (Java 25)
 
 ## Java BufferedReader – `eu.happycoders.bufferedreader`
 
